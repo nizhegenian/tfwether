@@ -15,6 +15,16 @@
 		<script src="js/jQuery.js"></script>
 	</head>
 	<body>
+		<!-- 判断用户是否登录 -->
+		<script>
+			// 如果没有loggedin
+			if(!localStorage.getItem('isLoggedIn')){
+				console.log("没登录成功，又跳转回去了。");
+				window.location.href='logging.html';
+			}else{
+				alert("登录成功");
+			}
+		</script>
 		<header class="container headered">
 			<div class="header-up">
 				<div class="header-up-img">
@@ -37,6 +47,7 @@
 				</table>
 			</div>
 			</header>
+			
 			
 			<!-- section1:标题-两张左右排布的图片 -->
 			<section class="container">
@@ -373,12 +384,20 @@
 			
 			<!-- section11:结尾的一些联系啥的 -->
 			<footer>
+				<!-- 页脚最外层div -->
 				<div class="footer-all">
-					<div></div>
+					<!-- 中层div控制整体大小 -->
+					<div class="footer-width">
+						<div class="footer-col">
+							<div class="footer-title">商业板块</div>
+							<p class="footer-text">合作联系</p>
+							<p class="footer-text">商业联系</p>
+							<p class="footer-text">吐槽</p>
+							<p class="footer-text">好评</p>
+						</div>
+					</div>
 				</div>
 			</footer>
-
 			
 	</body>
 </html>
-
