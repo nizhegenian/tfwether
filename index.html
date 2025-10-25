@@ -11,20 +11,22 @@
 		<link rel="stylesheet" href="couplut.css">
 		<link rel="stylesheet" href="seasonPointer.css"/>
 		<link rel="stylesheet" href="food.css"/>
-		<link rel="stylesheet" href="aboutUs.css"/>
+		<link rel="stylesheet" href="footer.css"/>
 		<script src="js/jQuery.js"></script>
 	</head>
 	<body>
 		<!-- 判断用户是否登录 -->
 		<script>
 			// 如果没有loggedin
-			if(!localStorage.getItem('isLoggedIn')){
+			if(!sessionStorage.getItem('isLoggedIn')){
 				console.log("没登录成功，又跳转回去了。");
 				window.location.href='logging.html';
 			}else{
-				alert("登录成功");
+				var username=sessionStorage.getItem("username");//获取本次的用户名
+				var password = sessionStorage.getItem("password");//获取本次的密码
 			}
 		</script>
+		
 		<header class="container headered">
 			<div class="header-up">
 				<div class="header-up-img">
@@ -395,6 +397,7 @@
 							<p class="footer-text">吐槽</p>
 							<p class="footer-text">好评</p>
 						</div>
+						
 					</div>
 				</div>
 			</footer>
