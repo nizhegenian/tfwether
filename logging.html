@@ -79,13 +79,13 @@
 			// 获取密码
 			var password = $("#password").val();
 			//判断账号密码是否正确
-			if( username=="ssq" && password=="123456" ){
+			if( (username=="cyy" && password=="n119" )|| ( username=="mpe" && password=="n33" )||( username=="sxm" && password=="g118" )){
 				console.log("账号密码正确");
 				
 				//保存用户信息到浏览器
-				localStorage.setItem("isLoggedIn","true");
-				localStorage.setItem("username","ssq");
-				localStorage.setItem("password","123456");
+				sessionStorage.setItem("isLoggedIn","true");
+				sessionStorage.setItem("username",username);
+				sessionStorage.setItem("password",password);
 				
 				//跳转到其他页面
 				window.location.href="index.html";
