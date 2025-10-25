@@ -1,0 +1,184 @@
+html,body{
+	/* 清除默认边距 */
+	margin: 0;
+	padding: 0;
+	width: 99.9%;
+	height: 99.9%;
+}
+
+body{
+	/* 大背景色 */
+	background-color:  #FEFBF6;
+	/* 大背景图片 */
+	background: url("./img/背景图6.png") no-repeat;
+	background-size: cover;
+	/* 溢出隐藏 */
+	overflow: hidden;
+}
+/* 卡片 */
+.logging-card{
+	/* 大小 */
+	max-width: 2000px;
+	/* 居中 */
+	margin: 10% auto;
+	/* 卡片颜色 */
+	background-color: #f5f1e6;
+	text-align: center;
+	/* 阴影 */
+	box-shadow: 5px 5px 20px black;
+	/* 圆角 */
+	border-radius: 30px;
+}
+/* 图标 */
+.logging-image{
+	/* 大小 */
+	width: 400px;
+	/* 顶部距离 */
+	padding-top: 180px;
+}
+/* 欢迎回来标题 */
+.logging-title{
+	/* 字体 */
+	font-family: "楷体";
+	color: #2C3E50;
+	font-size: 150px;
+}
+/* 两个文本输入框 */
+.logging-message input{
+	/* 边框浅赭石色 */
+	/* border: 1px solid #862617; */
+	box-shadow: 2px 2px 20px #2C3E50;
+	
+	/* 高度和宽度 */
+	line-height: 130px;
+	width: 50%;
+	/* 外边距 */
+	margin-top: 100px;
+	/* 圆角 */
+	border-radius: 50px;
+	font-size: 60px;
+	padding-left: 20px;
+	
+	/* 相对定位 */
+	padding-left: 30px; /* 防止文字遮挡图片 */
+	background-size: 80px;
+	background-repeat: no-repeat;
+	background-position: 900px center; /* 调整图片位置 */
+}
+/* 用户名图片 */
+.logging-input-name{
+	background-image: url("图标/用户.png");
+}
+/* 密码锁图片*/
+.logging-input-password{
+	background-image: url("./图标/密码3.png");
+	opacity: 0.8;
+}
+
+/* 记住我,忘记密码 */
+.logging-label{
+	/* 顶部距离 */
+	margin-top: 30px;
+	/* 字体 */
+	font-size: 50px;
+	color: #666666;/* “记住我”和“忘记密码” (中性灰色) */
+	/* 相对定位 */
+	position: relative;
+	
+	/* 设置高度，其他的溢出隐藏 */
+	height: 80px;
+}
+/* 记住我文本 */
+.logging-remember-text{
+	/* 绝对定位 */
+	position: absolute;
+	left: 550px;
+}
+/* 记住我复选框 */
+.logging-label input{
+	transform: scale(4);
+	/* 绝对定位 */
+	position: absolute;
+	top: 28px;
+	left: 500px;
+}
+/* 忘记密码 */
+.logging-unremember-password{
+	/* 靠右 */
+	margin-right: -700px;
+}
+/* 忘记密码超链接样式 */
+.logging-unremember-a{
+	text-decoration: none;
+	color: #666666;
+}
+/* 注册 */
+.logging-label-register{
+	/* 字体 */
+	font-size: 50px;
+	color: #666666;/* “记住我”和“忘记密码” (中性灰色) */
+	/* 相对定位 */
+	position: relative;
+	
+	/* 设置高度,其他溢出隐藏 */
+	height: 80px;
+}
+.logging-register{
+	text-decoration: none;
+	color: #06B6D4;/* 一种现代、清新的青绿色,更偏蓝色的青 */
+}
+/* 登录注册按钮 */
+.logging-button-label{
+	/* 大小 */
+	width: 50%;
+	/* 居中 */
+	margin: 80px auto;
+	/* 两端排布 */
+	display: flex;
+	justify-content: space-between;
+}
+.logging-button{
+	/* 大小 */
+	width: 400px;
+	height: 130px;
+	
+	/* 按钮颜色 */
+	background-color: #0D9488;
+	/* 无边框 */
+	border: none;
+	/* 圆角 */
+	border-radius: 18px;
+	
+	/* 字体 */
+	font-size: 50px;
+	/* 字体颜色 */
+	color: #FFFFFF;
+	font-family: "Microsoft YaHei", "PingFang SC", sans-serif; /* 使用优雅的非衬线字体 */
+	
+}
+
+/* 今日天气 */
+.logging-snow-text span{
+	display: inline;
+	font-size: 50px;
+	/* 清秀无衬线体 */
+	font-family: "LXGW WenKai", "SimSun", "Source Han Serif", serif;
+	color: #666; /* 中性灰色，不抢眼 */
+}
+/* 麦穗 */
+.logging-snow{
+	width: 50px;
+}
+/* 诗句 */
+.logging-poem{
+	font-size: 50px;
+	font-family: "楷体";
+	line-height: 100px;
+	
+	color: #666; /* 中性灰色，不抢眼 */
+	
+	/* 外边距 */
+	padding-bottom: 30px;
+}
+
+

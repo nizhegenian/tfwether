@@ -1,0 +1,47 @@
+/*鼠标悬停时，字体颜色变深黑*/
+.text-color-hover:hover{
+	color: black;
+}
+/*鼠标悬停时，字体下方出现红线*/
+.text-under-red-line:hover{
+	border-bottom: 25px solid #A31700;
+}
+/*表格最大宽度为5000，整体表格居中*/
+.table-canter-maxwidth{
+	max-width: 5000px;
+	margin: 0 auto;
+}
+/*鼠标悬停时，背景图片更换，文字变为白色*/
+.image-title-reverse:hover{
+	background-image: url("./图标/标题括号-新反色.png");
+	color: white;
+}
+/*图片反色*/
+.inverted:hover{
+	filter: invert(10%);
+}
+/*边框圆角*/
+.image-border-radius{
+	border-radius: 5%;
+}
+/*缩放,溢出隐藏在上一层级添加overflow*/
+.scale-bigger:hover{
+	transform: scale(1.1);
+	/* 添加阴影 */
+	box-shadow: 0px 0px 20px gray;
+}
+/* 文字轻微放大 ,溢出隐藏在上一层级添加overflow*/
+.logging-text-bigger:hover{
+	font-size: 60px;
+}
+.logging-text-overflow{
+	overflow: hidden;
+}
+/* 首页-节气指南-图片底部文字-变色 */
+.season-pointer-text:hover{
+	color: black;
+}
+/* 首页节气指南,按钮放大 */
+.season-top-button:hover{
+	transform: scale(1.1);
+}

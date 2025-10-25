@@ -1,0 +1,138 @@
+html{
+	max-width: 6800px;
+	margin: 0 auto;
+}
+.headered{
+	/* position: fixed;*/
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: white; 
+	
+	/*固定行高*/
+	height: 500px;
+	overflow: hidden;
+}
+/* section{
+	background-color: aliceblue;
+} */
+.container{
+
+}
+/* 导航栏上方的logo和文字部分 */
+.header-up{
+	display: flex;/*弹性布局*/
+	max-height: 300px;
+}
+.header-up-img{
+	flex: 0 0 auto;/*图片容器不伸缩 自动大小*/
+}
+.header-up-img img{
+	max-width: 300px;
+	margin: 50px 20px 20px 300px;
+}
+.header-up-text{
+	font-family: "宋体";
+	color: grey;
+	font-size: 70px;
+	line-height: 350px;/*设置行高，水平居中*/
+}
+.container hr{
+	height: 6px;
+	background-color: gainsboro;
+	border: 0px;
+}
+/* 导航栏下方的table部分 */
+.header-down-table{
+	border-spacing: 350px 10px;/*设置单元格之间的边距*/
+	overflow: hidden;
+}
+/* 导航栏下方table中的每个文字块 */
+.header-down-table td{
+	font-size: 90px;
+	font-family: "字魂白鸽天行体(商用需授权)";
+	color: grey;
+	/* width: 350px; */
+	width: 1%;
+	text-align: center;
+	line-height: 150px;
+}
+/* section1:两张左右排布的图片，标题的括号 */
+.section-1{
+	display: flex;/*flex布局*/
+	height: 800px;
+	align-items: center;/*水平居中*/
+	justify-content: center;/*垂直居中*/
+	
+}
+.section-1 img{
+	max-width: 100px;
+	opacity: 0.5;/*透明度*/
+}
+.section-1-title{
+	font-size: 100px;
+	font-weight: bold;
+	display: inline-block;
+	font-family: "楷体";
+	color: grey;
+}
+/* section2:四个标题框 */
+.section2-table{
+	border-spacing: 600px 0px;
+}
+.section2-weather{
+	font-size: 80px;
+	font-family: "宋体";
+	width: 500px;
+	height: 200px;
+	text-align: center;
+	background-size: 100% 100%;
+	background-image: url("./图标/标题括号-新.png"); 
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+/* section3:两个图片左右排列和春夏秋冬四个文字块 */
+.section3{
+	max-width: 5000px;
+	margin: 0 auto;
+	border-spacing: 200px;
+}
+/* 首页，导航栏下方左边24节气td */
+.section3-td-image{
+	overflow: hidden;
+	transition: transform 0.5s ease;
+}
+/* 首页，导航栏下方左边24节气图片-左 */
+.section3-td-image img{
+	width: 100%;
+}
+.section3-td-image:hover{
+	border-radius: 5%;
+}
+.section3-text{
+	width: 50%;
+	line-height: 100px;
+	background: linear-gradient(to top,#61C2A2,white);
+	padding: 80px;
+}
+.section3-text-title{
+	font-size: 100px;
+	font-family: "楷体";
+}
+.section3-text-title img{
+	width: 200px;
+}
+.section3-text-text{
+	font-size: 60px;
+	font-family: "宋体";
+	text-indent: 2em;
+}
+.section3-text-image{
+	width: 80px;
+	filter: invert(100%);
+}
+.section3-text-span{
+	font-size: 80px;
+	color:white;
+}

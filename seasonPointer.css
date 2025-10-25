@@ -1,0 +1,190 @@
+/* 最外层的div：用来放置整一块的内容 */
+.season-pointer-div{
+	/* 消除默认边距 */
+	margin: 0;
+	padding: 0;
+	/* 大小 */
+	width: 100%;
+	height: 3400px;
+	
+	/* 溢出隐藏 */
+	/* overflow: hidden; */
+}
+/* 顶部文字 */
+.season-top-text{
+	/* 文字 */
+	font-size: 80px;
+	font-family: "宋体";
+	text-indent: 2em;
+	/* 行高 */
+	line-height: 100px;
+	/* 宽度 */
+	width: 60%;
+	/* 居中 */
+	margin: 20px auto;
+}
+/* 顶部抽卡按钮div*/
+.season-top-button-div{
+	/* 位置 */
+	margin: 0 auto;
+	text-align: center;
+}
+/* 顶部抽卡按钮 */
+.season-top-button{
+	/* 按钮大小 */
+	width: 750px;
+	line-height: 200px;
+	
+	/* 居中和上下边距 */
+	margin: 150px auto;
+	
+	/* 移除边框 */
+	border: none;
+	outline: none;
+	
+	/* 移除背景 */
+	background-color: transparent;
+	
+	/* 自定义背景 */
+	background-image: url("./图标/古风按钮-红.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	/* 文字样式 */
+	font-family: "黄庭坚书法字体";
+	font-size: 100px;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	justify-content: center;
+	
+}
+/* 用来放置上半部分的内容 */
+.season-pointer-div-up{
+	/* 大小 */
+	width: 70%;
+	height: 40%;
+	
+	/* 居中 */
+	margin: 0 auto;
+	
+	/* 弹性布局 */
+	display: flex;
+	justify-content: space-around;
+}
+/* 用来放置一小块的内容 */
+.season-pointer-little{
+	/* 大小 */
+	width: 8%;
+	height: 80%;
+	
+	/* 相对位置 */
+	position: relative;
+	
+	/* 圆角 */
+	border-radius: 30px;
+	
+	/* 溢出隐藏 */
+	overflow: hidden;
+	
+	/* 图片整体设置 */
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	/* 上内边距 */
+	padding-top: 20px;
+	
+	/* 边框和阴影 */
+	border: 1px dotted #C67C2A;
+	box-shadow: 2px 2px 25px gray;
+}
+/* 小块内容的文字部分 */
+.season-pointer-text{
+	/* 盒子大小 */
+	width: 100%;
+	height: 30%;
+	/* 文字居中 */
+	text-align: center;
+	
+	/* 绝对位置 */
+	position: absolute;
+	/* 居下 */
+	bottom: 0px;
+	
+	/* 线性渐变颜色 */
+	/* background-color: #C67C2A; */
+	background-image: linear-gradient(to bottom,white 1%, #C67C2A 75%);
+	opacity: 0.6;
+	
+	/* 总体控制文字颜色和阴影 */
+	color: white;
+	text-shadow: 2px 2px 20px black;
+}
+/* 标题文字 */
+.season-pointer-title{
+	/* 消除外边距 */
+	margin-top: 20px;
+	margin-bottom: 10px;
+	/* 文字大小 */
+	font-size: 120px;
+	/* 文字字体 */
+	font-family: "黄庭坚书法字体";
+}
+/* 时间p */
+.season-pointer-p{
+	font-size: 50px;
+	
+	/* 文字字体 */
+	font-family: "楷体";
+}
+/* 第一排6个拟人背景 */
+.season-people-1{
+	background-image: url("./img/节气拟人/立春.png");
+}
+.season-people-2{
+	background-image: url("./img/节气拟人/雨水.png");
+}
+.season-people-3{
+	background-image: url("./img/节气拟人/惊蛰.png");
+}
+.season-people-4{
+	background-image: url("./img/节气拟人/春分.png");
+}
+.season-people-5{
+	background-image: url("./img/节气拟人/清明.png");
+}
+.season-people-6{
+	background-image: url("./img/节气拟人/谷雨.png");
+}
+
+/* 用来放置下半部分的内容 */
+.season-pointer-div-down{
+	/* 大小 */
+	width: 70%;
+	height: 40%;
+	
+	/* 居中 */
+	margin: 0 auto;
+	
+	/* 弹性布局 */
+	display: flex;
+	justify-content: space-around;
+}
+/* 第二排6个拟人背景 */
+.season-people-down-1{
+	background-image: url("./img/节气拟人/立春.png");
+}
+.season-people-down-2{
+	background-image: url("./img/节气拟人/雨水.png");
+}
+.season-people-down-3{
+	background-image: url("./img/节气拟人/惊蛰.png");
+}
+.season-people-down-4{
+	background-image: url("./img/节气拟人/春分.png");
+}
+.season-people-down-5{
+	background-image: url("./img/节气拟人/清明.png");
+}
+.season-people-down-6{
+	background-image: url("./img/节气拟人/谷雨.png");
+}

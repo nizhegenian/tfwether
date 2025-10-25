@@ -1,0 +1,251 @@
+/* 食物外面的大盒子div */
+.food-div{
+	/* 大小 */
+	width: 70%;
+	height: 2600px;
+	/* 居中 */
+	margin: 0 auto;
+	/* 均匀分布 */
+	display: flex;
+	justify-content: space-around;
+}
+/* 左侧大盒子div */
+.food-left-div{
+	width: 30%;
+	height: 100%;
+}
+/* 左侧图片 */
+.food-left-image{
+	/* 大小 */
+	width: 100%;
+}
+/* 左侧文字部分 */
+.food-left-div-text{
+	/* 大小 */
+	width: 80%;
+	height: 45%;
+	
+	/* 居中 */
+	margin: 0 auto;
+}
+/* 左侧文字标题 */
+.food-left-div-title{
+	/* 字体 */
+	font-family: "楷体";
+	font-size: 100px;
+	/* 顶部距离 */
+	margin-top: 50px;
+	
+	/* 左侧内部距离 */
+	padding-left: 50px;
+	border-left: 40px solid #49896E;
+}
+/* 左侧文字内容 */
+.food-left-div-p{
+	/* 字体 */
+	font-size: 60px;
+	font-family: "宋体";
+	text-indent: 2em;
+	line-height: 100px;
+	
+}
+
+/* 中间的食物大盒子 */
+.food-middle-image{
+	/* 大小 */
+	width: 40%;
+	height: 100%;
+}
+/* 中间的食物大盒子-上半部分 */
+.food-middle-up{
+	width: 100%;
+	height: 36%;
+	/* 两侧排布 */
+	display: flex;
+	justify-content: space-around;
+}
+/* 中间食物左右键按钮-总体结构 */
+.food-left-righ-button{
+	/* 大小 */
+	width: 25%;
+	height: 15%;
+	/* 背景 */
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	/* 顶部距离 和 居中 */
+	margin-top: 30%;
+	
+	
+	/* 文字 */
+	font-size: 90px;
+	text-align: center;
+	color: #D4A017;
+	font-family: "颜真卿颜体";
+	text-shadow: 2px 2px 5px black;
+}
+/* 中间食物左键按钮 */
+.food-left-button{
+	background-image: url("./图标/食物向左图标.png");
+}
+/* 中间食物卡通图片 */
+.food-image{
+	/* 大小 */
+	width: 60%;
+	height: 100%;
+	/* 背景 */
+	background-image: url("./img/食物/菠菜猪肝汤.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+}
+/* 中间食物右键按钮 */
+.food-right-button{
+	background-image: url("./图标/食物向右图标.png");
+	background-position: 90px;
+}
+/* 中间食物下方的按钮 */
+.food-middle-button{
+	/* 大小 */
+	width: 100%;
+	height: 20%;
+	
+	/* 图片背景 */
+	background-image: url("./图标/食物下方名称图标2.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	/* 文字 */
+	font-size: 180px;
+	color: white;
+	text-shadow: 2px 2px 10px black;
+	font-family: "黄庭坚书法字体";
+	line-height: 150px;
+	text-align: center;
+	padding-top: 7%;
+}
+
+/* 中间下方的食物功效 */
+.food-function{
+	/* 大小 */
+	width: 100%;
+	height: 35%;
+	
+	/* 相对定位 */
+	position: relative;
+}
+/* 食物功效-左上 */
+.food-func-left{
+	/* 绝对定位 */
+	position: absolute;
+	top:100px;
+	left:100px;
+	/* 背景 */
+	background-image: url("./图标/扇子纯色-浅.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	/* 大小 */
+	width: 50%;
+	height: 70%;
+	z-index: -1;
+}
+/* 食物功效-右下 */
+.food-func-right{
+	/* 绝对定位 */
+	position: absolute;
+	bottom:40px;
+	right:100px;
+	/* 背景 */
+	background-image: url("./图标/扇子纯色.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	/* 大小 */
+	width: 55%;
+	height: 65%;
+}
+/* 食物功效的标题文字 */
+.food-func-title{
+	/* 外边距 */
+	margin-left: 140px;
+	margin-top: 140px;
+	/* 内边距 */
+	padding: 10px;
+	
+	
+	/* 宽度 */
+	width: 300px;
+	
+	/* 文字 */
+	font-size: 70px;
+	font-family: "楷体";
+	color: white;
+	text-shadow: 2px 2px 10px black;
+	text-align: center;
+	
+	/* 背景 */
+	background-color: darkseagreen;
+	border-radius: 50px;
+	box-shadow: 2px 2px 20px gray;
+	
+}
+/* 食物功效的内容文字 */
+.food-func-p{
+	width: 60%;
+	/* 外边距 */
+	margin-left: 220px;
+	margin-top: 50px;
+	
+	/* 文字 */
+	font-size: 50px;
+	font-family: "宋体";
+	color: white;
+	text-shadow:  2px 2px 5px black;
+}
+/* 右侧食物大盒子 */
+.food-right-div{
+	width: 30%;
+	height: 100%;
+	/* 添加滚动条 */
+	overflow: scroll;
+	
+}
+/* 右侧食物烹调步骤背景 */
+.food-right-div{
+}
+/* 右侧食物烹调文字总体编辑 */
+.food-right-top-title{
+	/* 文字 */
+	font-size: 80px;
+	font-family: "楷体";
+	line-height: 120px;
+	
+	/*大小 */
+	width: 25%;
+	height: 120px;
+	
+	/* 居中 */
+	margin: 0 auto;
+	
+	/* 背景 */
+	background-image: linear-gradient(to left bottom,darkseagreen,white);
+	border-radius: 20px;
+	/* 阴影 */
+	box-shadow: 1px 1px 20px gray;
+}
+/* 右侧食物单个图片+文字大div-整体编辑*/
+.food-right-text-image{
+	/* 文字和图片居中 */
+	text-align: center;
+	height: 40%;
+}
+/* 右侧p文字内容-整体编辑 */
+.food-right-top-p{
+	/* 字体大小 */
+	font-size: 50px;
+	font-family: "宋体";
+}
+/* 右侧图片-整体编辑 */
+.food-right-image{
+	height: 50%;
+	margin-top: -100px;
+}
