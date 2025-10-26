@@ -4,7 +4,7 @@
 }
 /*鼠标悬停时，字体下方出现红线*/
 .text-under-red-line:hover{
-	border-bottom: 25px solid #A31700;
+	border-bottom: 25px solid #A31700; 
 }
 /*表格最大宽度为5000，整体表格居中*/
 .table-canter-maxwidth{

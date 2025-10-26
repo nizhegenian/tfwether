@@ -12,7 +12,10 @@
 		<link rel="stylesheet" href="seasonPointer.css"/>
 		<link rel="stylesheet" href="food.css"/>
 		<link rel="stylesheet" href="footer.css"/>
+		<link rel="stylesheet" href="slideCard.css"/>
+		<link rel="stylesheet" href="background.css"/>
 		<script src="js/jQuery.js"></script>
+		<script src="slideCard.js"></script>
 	</head>
 	<body>
 		<!-- 判断用户是否登录 -->
@@ -50,13 +53,16 @@
 			</div>
 			</header>
 			
-			
+			<div class="bg-left-tree"></div>
 			<!-- section1:标题-两张左右排布的图片 -->
 			<section class="container">
-				<div class="section-1">
-					<img src="图标/标题括号.png">
-					<div class="section-1-title text-color-hover">二十四节气</div>
-					<img src="图标/标题括号-右.png"/>
+				<div class="section-1-title-image">
+					<div class="section-1">
+						<img src="图标/标题括号.png">
+						<div class="section-1-title text-color-hover">二十四节气</div>
+						<img src="图标/标题括号-右.png"/>
+					</div>
+					<div class="green-leaf"></div>
 				</div>
 			</section>
 			
@@ -71,6 +77,8 @@
 					</tr>
 				</table>
 			</section>
+			
+			<div class="bg-green-bird"></div>
 			
 			<!-- section3:两个图片左右排列 -->
 			<section class="container">
@@ -91,10 +99,13 @@
 			
 			<!-- section4:文化内涵 -->
 			<section class="container">
-				<div class="section-1">
-					<img src="图标/标题括号.png">
-					<div class="section-1-title text-color-hover">文化内涵</div>
-					<img src="图标/标题括号-右.png"/>
+				<div class="section-1-title-image">
+					<div class="section-1">
+						<img src="图标/标题括号.png">
+						<div class="section-1-title text-color-hover">文化内涵</div>
+						<img src="图标/标题括号-右.png"/>
+					</div>
+					<div class="green-leaf"></div>
 				</div>
 			</section>
 			
@@ -160,10 +171,13 @@
 			
 			<!-- section6:节气指南 -->
 			<section class="container">
-				<div class="section-1">
-					<img src="图标/标题括号.png">
-					<div class="section-1-title text-color-hover">节气指南</div>
-					<img src="图标/标题括号-右.png"/>
+				<div class="section-1-title-image">
+					<div class="section-1">
+						<img src="图标/标题括号.png">
+						<div class="section-1-title text-color-hover">节气指南</div>
+						<img src="图标/标题括号-右.png"/>
+					</div>
+					<div class="green-leaf"></div>
 				</div>
 			</section>
 			
@@ -278,109 +292,348 @@
 			
 			<!-- section8:食间物语 -->
 			<section class="container">
-				<div class="section-1">
-					<img src="图标/标题括号.png">
-					<div class="section-1-title text-color-hover">食间物语</div>
-					<img src="图标/标题括号-右.png"/>
+				<div class="section-1-title-image">
+					<div class="section-1">
+						<img src="图标/标题括号.png">
+						<div class="section-1-title text-color-hover">食间物语</div>
+						<img src="图标/标题括号-右.png"/>
+					</div>
+					<div class="green-leaf"></div>
 				</div>
 			</section>
 			
 			<!-- section9:食物推荐 -->
-			<section class="container">
-				<!-- 食物外层的大盒子div -->
-				<div class="food-div">
-					<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
-					<div class="food-left-div">
-						<!-- 文字 -->
-						<div class="food-left-div-text">
-							<!-- 标题 -->
-							<div class="food-left-div-title">春天到了，吃啥呢</div>
-							<!-- 内容 -->
-							<p class="food-left-div-p">菠菜猪肝汤 是一道传统滋补汤品，主要作用包括 补血养肝、护眼明目、增强免疫力 以及 滋阴润燥。 
-							其功效源于菠菜和猪肝的营养互补，适合贫血、用眼过度及体虚人群适量食用。
-							菠菜富含 铁元素 和 叶酸，猪肝含有丰富的 血红素铁 和 维生素B12，两者结合可有效改善缺铁性贫血，促进血红蛋白合成。 </p>
+			<section class="container food-container-section">
+				<div class="food-container">
+					<!-- 食物外层的大盒子div -->
+					<div class="food-div food-silde-current food-silde-next active">
+						<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
+						<div class="food-left-div">
+							<!-- 文字 -->
+							<div class="food-left-div-text">
+								<!-- 标题 -->
+								<div class="food-left-div-title">立春到了，吃啥呢</div>
+								<!-- 内容 -->
+								<p class="food-left-div-p">菠菜猪肝汤 是一道传统滋补汤品，主要作用包括 补血养肝、护眼明目、增强免疫力 以及 滋阴润燥。 
+								其功效源于菠菜和猪肝的营养互补，适合贫血、用眼过度及体虚人群适量食用。
+								菠菜富含 铁元素 和 叶酸，猪肝含有丰富的 血红素铁 和 维生素B12，两者结合可有效改善缺铁性贫血，促进血红蛋白合成。 </p>
+							</div>
+							<!-- 图片 -->
+							<img src="./img/食物/人物烹调食物.png" class="food-left-image"/>
 						</div>
-						<!-- 图片 -->
-						<img src="./img/食物/人物烹调食物.png" class="food-left-image"/>
+						<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
+						<div class="food-middle-image">
+							<div class="food-middle-up">
+								<!-- 食物左键按钮 -->
+								<div class="food-left-button food-left-righ-button">敛身</div>
+								<!-- 食物图片 -->
+								<div class="food-image"><img src="./img/食物/菠菜猪肝汤.png" class="food-image-img"></div>
+								<!-- 食物右键按钮 -->
+								<div class="food-right-button food-left-righ-button">进履</div>
+							</div>
+							<div class="food-middle-button">菠菜猪肝汤</div>
+							<div class="food-function">
+								<div class="food-func-left">
+									<div  class="food-func-title">功效一：</div>
+									<div class="food-func-p">生血养血，补血养肝，改善视力与护眼功能</div>
+								</div>
+								<div class="food-func-right">
+									<div class="food-func-title">功效二：</div>
+									<div class="food-func-p">润燥滑肠，增强免疫力与抗氧化能力</div>
+								</div>
+							</div>
+						</div>
+						<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
+						<div class="food-right-div">
+							<!-- 第一块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤一</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>猪肝处理</strong><br>
+									• 切去筋膜：猪肝洗净后切2毫米薄片，剔除筋膜。🔪<br>
+									• 浸泡去血：清水泡20min，期间换水2次，至水变清。💧<br>
+									• 腌制去腥：沥水，加料酒、姜、淀粉抓匀，腌15min。🧂<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/菠菜猪肝汤做法步骤1.png" class="food-right-image">
+								</div>
+							</div>
+							<!-- 第二块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤二</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>菠菜处理</strong><br>
+										• 菠菜洗净切段，根部与叶子分开放。🥬<br>
+										• 焯水去草酸：水烧开加1勺油和半勺盐，先放入菠菜根焯30秒，再放叶子焯10秒，捞出过凉水。🌊<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/菠菜猪肝汤做法步骤2.png" class="food-right-image">
+								</div>
+							</div>
+							<!-- 第三块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤三</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>煮汤</strong><br>
+									• 煮猪肝和汤底：锅中加清水，烧开转小火，放猪肝，煮至变色浮起，捞出备用。🐷然后加入姜丝，煮香。🧄️<br>
+									• 下菠菜：放入焯好的菠菜，煮软。🥬️<br>
+									• 混合调味：倒入猪肝，加盐、白胡椒粉调味，滴香油即可。🛢️<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/菠菜猪肝汤做法步骤3.png" class="food-right-image">
+								</div>
+							</div>
+						</div>
 					</div>
-					<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
-					<div class="food-middle-image">
-						<div class="food-middle-up">
-							<!-- 食物左键按钮 -->
-							<div class="food-left-button food-left-righ-button">敛身</div>
-							<!-- 食物图片 -->
-							<div class="food-image"></div>
-							<!-- 食物右键按钮 -->
-							<div class="food-right-button food-left-righ-button">进履</div>
-						</div>
-						<div class="food-middle-button">菠菜猪肝汤</div>
-						<div class="food-function">
-							<div class="food-func-left">
-								<div  class="food-func-title">功效一：</div>
-								<div class="food-func-p">生血养血，补血养肝，改善视力与护眼功能</div>
+					
+					<!-- 食物外层的大盒子div-2 -->
+					<div class="food-div food-silde-next">
+						<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
+						<div class="food-left-div">
+							<!-- 文字 -->
+							<div class="food-left-div-text">
+								<!-- 标题 -->
+								<div class="food-left-div-title">雨水到了，吃啥呢</div>
+								<!-- 内容 -->
+								<p class="food-left-div-p">罐罐肉，又称坛子肉，是民间传统菜肴，流行于四川地区，上世纪80、90年代在渠县卷硐乡街道尤为盛行。 
+								该菜肴以沙罐为容器，采用微火慢煮的传统技法制作。 
+								其主料为猪蹄、猪腿，经洗净、去毛、微火烧烤后切块，配以黄豆或白豆、糯米及生姜、大蒜等佐料，加水置于沙罐中焖炖。 
+								制作时需将沙罐埋入暗燃料堆整夜焖制，成品味香软滑，适宜老年人食用。 </p>
 							</div>
-							<div class="food-func-right">
-								<div class="food-func-title">功效二：</div>
-								<div class="food-func-p">润燥滑肠，增强免疫力与抗氧化能力</div>
+							<!-- 图片 -->
+							<img src="./img/食物/人物烹调食物2.png" class="food-left-image"/>
+						</div>
+						<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
+						<div class="food-middle-image">
+							<div class="food-middle-up">
+								<!-- 食物左键按钮 -->
+								<div class="food-left-button food-left-righ-button">敛身</div>
+								<!-- 食物图片 -->
+								<div class="food-image"><img src="./img/食物/罐罐肉.png"  class="food-image-img"></div>
+								<!-- 食物右键按钮 -->
+								<div class="food-right-button food-left-righ-button">进履</div>
+							</div>
+							<div class="food-middle-button">罐罐肉</div>
+							<div class="food-function">
+								<div class="food-func-left">
+									<div  class="food-func-title">功效一：</div>
+									<div class="food-func-p">滋补强身，恢复体力,补益气血、恢复体力</div>
+								</div>
+								<div class="food-func-right">
+									<div class="food-func-title">功效二：</div>
+									<div class="food-func-p">健脾养胃，易于消化,有暖胃、促进食欲的功效</div>
+								</div>
+							</div>
+						</div>
+						<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
+						<div class="food-right-div">
+							<!-- 第一块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤一</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>猪肉处理</strong><br>
+									• 趁着猪肉新鲜劲，直接先改刀腌制，基本上1斤肉约放11—15G盐（为了增加风味可加入花椒、香叶、八角等）。<br>
+									• 腌制24—48H后开始清洗，滤干。可以使用厨房纸吸水，吹风吹干。<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/罐罐肉做法1.png" class="food-right-image">
+								</div>
+							</div>
+							<!-- 第二块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤二</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>菠菜处理</strong><br>
+										• 炼制猪油，因为买少了，添加了一部分植物油。加入肉炸干水分（如果炸的过程中有泡沫析出，就是水分再变干的过程）<br>
+										• 要是锅大基本上就是浮起来就行，家里看榨至琥珀色即可。可以把肉皮多炸一炸<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/罐罐肉做法2.png" class="food-right-image">
+								</div>
+							</div>
+							<!-- 第三块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤三</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>煮汤</strong><br>
+									• 起锅晾凉，拿一个土陶坛。猪皮朝下依次摆放。再加入油没过肉密封️<br>
+									• 封坛，我加了2层保鲜膜。放在阴凉处存放约20天风味更好️<br>
+									• 每次吃的时候取一块，炸的时候就闻着香了，喜欢的姐妹可以试一试啦！️<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/罐罐肉做法3.png" class="food-right-image">
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
-					<div class="food-right-div">
-						<!-- 第一块内容 -->
-						<div class="food-right-text-image">
-							<!-- 大标题 -->
-							<div class="food-right-top-title">步骤一</div>
-							<!-- 内容 -->
-							<p class="food-right-top-p">
-								<strong>猪肝处理</strong><br>
-								• 切去筋膜：猪肝洗净后切2毫米薄片，剔除筋膜。🔪<br>
-								• 浸泡去血：清水泡20min，期间换水2次，至水变清。💧<br>
-								• 腌制去腥：沥水，加料酒、姜、淀粉抓匀，腌15min。🧂<br>
-							</p>
-							<div class="food-right-image-div">
-								<img src="./img/食物/菠菜猪肝汤做法步骤1.png" class="food-right-image">
+					
+					<!-- 食物外层的大盒子div-3 -->
+					<div class="food-div food-silde-next">
+						<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
+						<div class="food-left-div">
+							<!-- 文字 -->
+							<div class="food-left-div-text">
+								<!-- 标题 -->
+								<div class="food-left-div-title">惊蛰到了，吃啥呢</div>
+								<!-- 内容 -->
+								<p class="food-left-div-p">枸杞银耳羹为药食两用之品，具有补充营养、润肺养胃、滋补肝肾等功效。 
+								1、补充营养 枸杞银耳羹含碳水化合物、蛋白质、无机盐、维生素B和胡萝卜素等营养成分，能帮助机体补充营养。
+								 2、润肺养胃 银耳味甘，性平，归肺、胃经，能滋阴润肺、养胃生津。 </p>
+							</div>
+							<!-- 图片 -->
+							<img src="./img/食物/人物烹调食物3.png" class="food-left-image"/>
+						</div>
+						<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
+						<div class="food-middle-image">
+							<div class="food-middle-up">
+								<!-- 食物左键按钮 -->
+								<div class="food-left-button food-left-righ-button">敛身</div>
+								<!-- 食物图片 -->
+								<div class="food-image"><img src="./img/食物/枸杞银耳羹.png"  class="food-image-img"></div>
+								<!-- 食物右键按钮 -->
+								<div class="food-right-button food-left-righ-button">进履</div>
+							</div>
+							<div class="food-middle-button">枸杞银耳羹</div>
+							<div class="food-function">
+								<div class="food-func-left">
+									<div  class="food-func-title">功效一：</div>
+									<div class="food-func-p">补充营养，润肺养胃，滋补肝肾</div>
+								</div>
+								<div class="food-func-right">
+									<div class="food-func-title">功效二：</div>
+									<div class="food-func-p">益精明目，增强免疫力与抗氧化能力</div>
+								</div>
 							</div>
 						</div>
-						<!-- 第二块内容 -->
-						<div class="food-right-text-image">
-							<!-- 大标题 -->
-							<div class="food-right-top-title">步骤二</div>
-							<!-- 内容 -->
-							<p class="food-right-top-p">
-								<strong>菠菜处理</strong><br>
-									• 菠菜洗净切段，根部与叶子分开放。🥬<br>
-									• 焯水去草酸：水烧开加1勺油和半勺盐，先放入菠菜根焯30秒，再放叶子焯10秒，捞出过凉水。🌊<br>
-							</p>
-							<div class="food-right-image-div">
-								<img src="./img/食物/菠菜猪肝汤做法步骤2.png" class="food-right-image">
+						<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
+						<div class="food-right-div">
+							<!-- 第一块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤一</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>预处理食材</strong><br>
+									• 干银耳冷水浸泡1-2小时（温水加速泡发），去根撕小朵，加面粉搓洗去杂质<br>
+									• 雪梨处理：去皮去核切块（保留皮增香需彻底洗净）<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/枸杞银耳羹做法1.png" class="food-right-image">
+								</div>
 							</div>
-						</div>
-						<!-- 第三块内容 -->
-						<div class="food-right-text-image">
-							<!-- 大标题 -->
-							<div class="food-right-top-title">步骤三</div>
-							<!-- 内容 -->
-							<p class="food-right-top-p">
-								<strong>煮汤</strong><br>
-								煮猪肝和汤底：锅中加清水，烧开转小火，放猪肝，煮至变色浮起，捞出备用。🐷然后加入姜丝，煮香。🧄️<br>
-								下菠菜：放入焯好的菠菜，煮软。🥬️<br>
-								混合调味：倒入猪肝，加盐、白胡椒粉调味，滴香油即可。🛢️<br>
-							</p>
-							<div class="food-right-image-div">
-								<img src="./img/食物/菠菜猪肝汤做法步骤3.png" class="food-right-image">
+							<!-- 第二块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤二</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>炖煮方法</strong><br>
+										• 银耳+清水（比例1:5）大火煮沸，搅拌15秒助出胶，转小火炖40分钟<br>
+										• 加雪梨、冰糖、红枣，续炖30分钟至银耳软烂；<br>
+										• 关火前5分钟加枸杞，避免煮烂<br>
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/枸杞银耳羹做法2.png" class="food-right-image">
+								</div>
+							</div>
+							<!-- 第三块内容 -->
+							<div class="food-right-text-image">
+								<!-- 大标题 -->
+								<div class="food-right-top-title">步骤三</div>
+								<!-- 内容 -->
+								<p class="food-right-top-p">
+									<strong>调味与保存</strong><br>
+									• 甜度调整：冷藏后甜味减弱，可略多放冰糖️<br>
+									• 食用建议：热饮润肺，冰镇解暑，当日食用最佳（银耳过夜易变质）️<br>									
+								</p>
+								<div class="food-right-image-div">
+									<img src="./img/食物/枸杞银耳羹做法3.png" class="food-right-image">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			
+			<!-- 点击切换食物效果 -->
+			<script>
+				//拿到第一张图片
+				var silde = $(".food-silde-current");//永远的第一张图片
+				var current = silde.first();//当前图片
+				var next = current.next(".food-silde-next");//所有大标签都包含next,这样才能轮播
+				current.addClass("active");//确保当前显示
+				//如果遇到左键点击事件
+				$(".food-left-button").click(function(){
+					switchSlide();
+				});
+				function switchSlide(){
+					//隐藏当前图片
+					current.removeClass('active');
+					
+					//切换下一张图片
+					next = current.next(".food-silde-next");//next下一张
+					//最后一张图片
+					if(next.length === 0){
+						//next回到第一张
+						next = silde.first();
+						console.log("next回到第一张,next的长度"+next.length);
+					}
+					next.addClass('active');//活跃显示
+					
+					//current和next的切换
+					current = next;//current下一张
+					console.log("current已切换"+current.length);
+					
+					
+					console.log("next已切换"+next.length);
+				};
+				//如果遇到右键点击事件
+				$(".food-right-button").click(function(){
+					//隐藏当前图片
+					current.removeClass('active');
+					
+					//切换下一张图片
+					next = current.next(".food-silde-next");//next下一张
+					//最后一张图片
+					if(next.length === 0){
+						//next回到第一张
+						next = silde.first();
+						console.log("next回到第一张,next的长度"+next.length);
+					}
+					
+					next.addClass('active');//活跃显示
+					
+					//current和next的切换
+					current = next;//current下一张
+					console.log("current已切换"+current.length);
+					
+					
+					console.log("next已切换"+next.length);
+				});
+				
+			</script>
+			
 			<!-- section10:掩卷长思 -->
 			<section class="container">
-				<div class="section-1">
-					<img src="图标/标题括号.png">
-					<div class="section-1-title text-color-hover">掩卷长思</div>
-					<img src="图标/标题括号-右.png"/>
+				<div class="section-1-title-image">
+					<div class="section-1">
+						<img src="图标/标题括号.png">
+						<div class="section-1-title text-color-hover">掩卷长思</div>
+						<img src="图标/标题括号-右.png"/>
+					</div>
+					<div class="green-leaf"></div>
 				</div>
 			</section>
 			
@@ -390,14 +643,66 @@
 				<div class="footer-all">
 					<!-- 中层div控制整体大小 -->
 					<div class="footer-width">
+						<!-- 三列-1 -->
 						<div class="footer-col">
 							<div class="footer-title">商业板块</div>
-							<p class="footer-text">合作联系</p>
-							<p class="footer-text">商业联系</p>
-							<p class="footer-text">吐槽</p>
-							<p class="footer-text">好评</p>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-握手.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">合作联系</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-聊天.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">商业联系</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-吐槽.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">吐槽</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-点赞.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">好评</a>
+							</div>
 						</div>
-						
+						<!-- 三列-2 -->
+						<div class="footer-col">
+							<div class="footer-title">学生板块</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-学生.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">学生认证</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-高校.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">高校认证</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-爱好者聚集地.png" class="footer-p-image"/>
+								<a href="https://www.jingqu.wang/" class="footer-text">景点推荐</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-点赞.png" class="footer-p-image"/>
+								<a href="https://www.dpm.org.cn/Creative.html" class="footer-text">文创购买</a>
+							</div>
+						</div>
+						<!-- 三列-3 -->
+						<div class="footer-col">
+							<div class="footer-title">友情链接</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-爱好者聚集地.png" class="footer-p-image"/>
+								<a href="http://www.feiyihuaxia.com/" class="footer-text">聚集地</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-传承人.png" class="footer-p-image"/>
+								<a href="https://www.ihchina.cn/representative" class="footer-text">传承人</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-吐槽.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">小游戏</a>
+							</div>
+							<div class="footer-p">
+								<img src="./图标/首页页脚/首页页脚-点赞.png" class="footer-p-image"/>
+								<a href="#" class="footer-text">其他</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>

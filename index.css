@@ -2,16 +2,32 @@ html{
 	max-width: 6800px;
 	margin: 0 auto;
 }
+body{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	
+	background: url("./img/背景/宣纸.jpg");
+	background-size: cover;
+	
+	/* opacity: 0.4; */
+}
 .headered{
 	/* position: fixed;*/
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	background-color: white; 
 	
 	/*固定行高*/
 	height: 500px;
 	overflow: hidden;
+	
+	box-shadow: 2px 2px 30px gray;
+	
+	background: linear-gradient(90deg, #D9F5EF, #FAF8F3);
+
+	
+	
 }
 /* section{
 	background-color: aliceblue;
@@ -45,7 +61,7 @@ html{
 /* 导航栏下方的table部分 */
 .header-down-table{
 	border-spacing: 350px 10px;/*设置单元格之间的边距*/
-	overflow: hidden;
+	
 }
 /* 导航栏下方table中的每个文字块 */
 .header-down-table td{
@@ -57,12 +73,22 @@ html{
 	text-align: center;
 	line-height: 150px;
 }
+/* 标题和图片外层的div */
+.section-1-title-image{
+	width: 100%;
+	height:400px;
+	
+	/* 上边距 */
+	margin-top: 300px;
+}
 /* section1:两张左右排布的图片，标题的括号 */
 .section-1{
 	display: flex;/*flex布局*/
-	height: 800px;
+	height: 200px;
 	align-items: center;/*水平居中*/
 	justify-content: center;/*垂直居中*/
+	
+	/* border: 1px solid black; */
 	
 }
 .section-1 img{
@@ -76,16 +102,41 @@ html{
 	font-family: "楷体";
 	color: grey;
 }
+/* 下面的荷叶 */
+.green-leaf{
+	width: 800px;
+	height: 200px;
+	margin: 0 auto;
+	
+	
+	background: url("./img/背景/荷叶.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
 /* section2:四个标题框 */
 .section2-table{
-	border-spacing: 600px 0px;
+	width: 80%;
+	height: 600px;
+}
+.section2-table tr{
+	display: flex;
+	justify-content: space-around;
+	
+	margin-top: 250px;
+	
+	width: 100%;
+	
 }
 .section2-weather{
 	font-size: 80px;
 	font-family: "宋体";
-	width: 500px;
-	height: 200px;
 	text-align: center;
+	
+	line-height: 200px;
+	
+	width: 800px;
+	height: 200px;
+	
 	background-size: 100% 100%;
 	background-image: url("./图标/标题括号-新.png"); 
 	background-repeat: no-repeat;

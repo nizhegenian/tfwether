@@ -1,14 +1,38 @@
+/* 最外层section */
+.food-container-section{
+	height: 2600px;
+}
+/* 外层div，里面装着不同的食物做法 */
+.food-container{
+	/* 相对定位 */
+	position: relative;
+	height: 100%;
+}
 /* 食物外面的大盒子div */
 .food-div{
 	/* 大小 */
-	width: 70%;
-	height: 2600px;
+	width: 80%;
+	height: 100%;
 	/* 居中 */
 	margin: 0 auto;
 	/* 均匀分布 */
 	display: flex;
 	justify-content: space-around;
+	
+	/* 位置:所有图片叠在一起 */
+	position: absolute;
+	left:10%;
+	
+	/* 默认透明 */
+	opacity: 0;
+	transition: opacity 0.5s;/* 过渡效果 */
+	
 }
+/* 活跃图片显示 */
+.food-div.active{
+	opacity: 1;
+}
+
 /* 左侧大盒子div */
 .food-left-div{
 	width: 30%;
@@ -23,7 +47,7 @@
 .food-left-div-text{
 	/* 大小 */
 	width: 80%;
-	height: 45%;
+	height: 40%;
 	
 	/* 居中 */
 	margin: 0 auto;
@@ -93,11 +117,10 @@
 	/* 大小 */
 	width: 60%;
 	height: 100%;
-	/* 背景 */
-	background-image: url("./img/食物/菠菜猪肝汤.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	
+}
+/* 中间食物卡片内嵌的图片 */
+.food-image-img{
+	width: 100%;
 }
 /* 中间食物右键按钮 */
 .food-right-button{

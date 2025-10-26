@@ -1,0 +1,30 @@
+/* 存放上半部分的画卷 */
+.bg-left-tree{
+	/* 位置 */
+	position: absolute;
+	top:-50px;
+	/* 大小 */
+	width: 60%;
+	height:	2600px;
+	
+	/* 图片 */
+	background: url("./img/背景/柳叶.png") no-repeat;
+	background-size: contain;
+	
+	z-index: -3;
+	
+	opacity: 0.3;
+}
+
+.bg-green-bird{
+	position: absolute;
+	right: 0px;
+	top:2450px;
+	
+	/* 大小 */
+	width: 22%;
+	height:	1000px;
+	
+	background: url("./img/背景/白鹤.png") no-repeat;
+	background-size: contain;
+}
