@@ -171,20 +171,20 @@
 }
 /* 第二排6个拟人背景 */
 .season-people-down-1{
-	background-image: url("./img/节气拟人/立春.png");
+	background-image: url("./img/节气拟人/立夏.png");
 }
 .season-people-down-2{
-	background-image: url("./img/节气拟人/雨水.png");
+	background-image: url("./img/节气拟人/小满.png");
 }
 .season-people-down-3{
-	background-image: url("./img/节气拟人/惊蛰.png");
+	background-image: url("./img/节气拟人/芒种.png");
 }
 .season-people-down-4{
-	background-image: url("./img/节气拟人/春分.png");
+	background-image: url("./img/节气拟人/夏至.png");
 }
 .season-people-down-5{
-	background-image: url("./img/节气拟人/清明.png");
+	background-image: url("./img/节气拟人/小暑.png");
 }
 .season-people-down-6{
-	background-image: url("./img/节气拟人/谷雨.png");
+	background-image: url("./img/节气拟人/大暑.png");
 }

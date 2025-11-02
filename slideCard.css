@@ -1,0 +1,75 @@
+/* 滑动 */
+.slide-img{
+	/* 先隐藏 */
+	opacity: 0;
+	transform: translateY(100px);/* 向下一点点 */
+	transition: all 1s ease;/* 淡入 */
+}
+.slide-img.show{
+	opacity: 1;
+	/* 回到原来的位置 */
+	transform: translateY(0);
+}
+/* 慢一点的滑动 */
+.slide-img-2{
+	/* 先隐藏 */
+	opacity: 0;
+	/* 偏移 */
+	transform: translateY(150px);
+	transition: all 2s ease;
+}
+.slide-img-2.show{
+	/* 展示 */
+	opacity: 1;
+	transform: translateY(0);
+}
+/* 从右向左,页面加载好就滑动 */
+.slide-right-left{
+	opacity: 0;
+	transform: translateX(200px);
+	transition: all 1s ease;
+}
+.slide-right-left.show{
+	opacity: 1;
+	transform: translateX(0);
+}
+/* 从下向上,页面加载好就滑动 */
+.slide-to-top{
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 1s ease;
+}
+.slide-to-top.show{
+	opacity: 1;
+	transform: translateY(0);
+}
+/* 从下向上,页面加载好就滑动 慢一点*/
+.slide-to-top-2{
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 2s ease;
+}
+.slide-to-top-2.show{
+	opacity: 1;
+	transform: translateY(0);
+}
+/* 敦煌人物左侧向右侧滑动 */
+.people-left{
+	opacity: 0;
+	transform: translateX(-200px);
+	transition: all 2s ease;
+}
+.people-left.show{
+	opacity: 1;
+	transform: translateX(0);
+}
+/* 敦煌人物右侧向左侧滑动 */
+.people-right{
+	opacity: 0;
+	transform: translateX(200px);
+	transition: all 2s ease;
+}
+.people-right.show{
+	opacity: 1;
+	transform: translateX(0);
+}
