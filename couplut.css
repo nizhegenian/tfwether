@@ -75,10 +75,14 @@
 /* 左侧春联下半部分 */
 .slide-left{
 	height:0;
+	opacity: 0;
+	z-index: 2;
 }
 /* 右侧春联下半部分 */
 .slide-right{
 	height: 0;
+	opacity: 0;
+	z-index: 2;
 }
 
 /* 中间的大块 */
@@ -203,14 +207,32 @@
 }
 /* 中间下半部分的四个小图片,单独设置，第一张 */
 .couplut-middle-down-1{
-	background-image: url("./img/首页春季.png");
+	background-image: url("./img/文化内涵/燕子.png");
 }
 .couplut-middle-down-2{
-	background-image: url("./img/首页夏季.png");
+	background-image: url("./img/文化内涵/蝴蝶.png");
 }
 .couplut-middle-down-3{
-	background-image: url("./img/首页秋季.png");
+	background-image: url("./img/文化内涵/兔子.png");
 }
 .couplut-middle-down-4{
-	background-image: url("./img/首页冬季.png");
+	background-image: url("./img/文化内涵/鹿.png");
+}
+
+
+/* 敦煌人物 */
+.people-left-right{
+	width: 0%;
+	height: 100%;
+	position: relative;
+}
+/* 左侧敦煌人物 */
+.people-left{
+	height: 100%;
+}
+/* 右侧敦煌人物 */
+.people-right{
+	height: 100%;
+	position: absolute;
+	right: 0px;
 }

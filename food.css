@@ -100,13 +100,15 @@
 	/* 顶部距离 和 居中 */
 	margin-top: 30%;
 	
-	
 	/* 文字 */
 	font-size: 90px;
 	text-align: center;
 	color: #D4A017;
 	font-family: "颜真卿颜体";
 	text-shadow: 2px 2px 5px black;
+	
+	/* 有遮罩层 */
+	z-index: 11;
 }
 /* 中间食物左键按钮 */
 .food-left-button{

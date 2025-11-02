@@ -1,0 +1,230 @@
+.all{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	
+	/* background: url("./img/背景/宣纸.jpg"); */
+	/* background-size: cover; */
+	
+	/* opacity: 0.4; */
+}
+.blur-background{
+	filter: blur(3px);
+	transition: filter 0.5s ease;
+	
+	pointer-events: none;
+	user-select: none;
+}
+/* 添加遮罩层 */
+ /* 遮罩层 */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 2;
+	display: none;
+	
+	pointer-events: none;
+}
+ /* 卡片跳出动画 */
+@keyframes jumpIn {
+	0% { 
+		transform: translate(-50%, -50%) scale(0.1); 
+		opacity: 0; 
+	}
+	70% {
+		transform: translate(-50%, -50%) scale(1.1); 
+	}
+	100% { 
+		transform: translate(-50%, -50%) scale(1); 
+		opacity: 1; 
+	}
+}
+.jump-in {
+	animation: jumpIn 0.8s ease-out forwards;
+	display: flex !important;
+}
+/* 卡片效果设置 */
+.jump-card {
+	width: 2200px;
+	height: 2000px;
+	background-color:white;
+	border-radius: 15px;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	display: none;
+	
+	z-index: 2;
+	
+}
+/* 卡片所有的内容 */
+.jump-card-all{
+	width: 100%;
+	height: 100%;
+}
+/* 卡片关闭图片 */
+.close-card{
+	/* 外边距 */
+	margin-top: 100px;
+	
+	width:100%;
+	height: 5%;
+	
+	/* 绝对定位 */
+	position: relative;
+	
+}
+.close-card-img{
+	width: 100px;
+	height: 100px;
+	
+	position: absolute;
+	right: 100px;
+}
+/* 卡片内容 */
+/* .clothes-div{
+	width: 100%;
+	height: 100%;
+	display: inline;
+} */
+/* 卡片除了关闭图片以外的内容 */
+.clothes-content{
+	width: 100%;
+	height: 90%;
+	
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+/* 新品的标志 */
+.title-img{
+	
+}
+
+/* 冬季的衣服-左侧 */
+.clothes-winter{
+	height: 90%;
+	
+	margin-left: 5%;
+}
+/* 标题和文字信息-右侧 */
+.clothes-right{
+	width: 40%;
+	height: 90%;
+	
+	margin-right: 5%;
+}
+/* 服装等级 */
+.clothes-grade{
+	background: linear-gradient(#FFD700,black);
+	background-clip: text;
+	color: transparent;
+}
+/* 标题 */
+.clothes-title{
+	font-size: 90px;
+	color: gray;
+	font-family: "楷体";
+	text-align: center;
+	
+	width: 100%;
+	height: 100%;
+}
+/* 标题下方文字 */
+.clothes-right-p{
+	width: 100%;
+	height: 100%;
+}
+.clothes-right-text{
+	font-size: 60px;
+}
+.red-color{
+	color: red;
+}
+
+/* 下方的购买和抽卡按钮 */
+.under-button{
+	width: 100%;
+	height: 10%;
+}
+/* 购买按钮 */
+.clothes-buy{
+	border: 1px solid black;
+	width: 35%;
+	height: 100%;
+
+	border-radius: 25px;
+	background: linear-gradient(to bottom, #FFD700, #ffffff);
+	
+	font-size: 60px;
+	color: grey;
+}
+/* 购买的超链接 */
+.clothes-buy-a{
+	text-decoration: none;
+	display: inline-block;
+	color: grey;
+}
+/* 再抽一次按钮 */
+.clothes-right-button{
+}
+
+/* 下面的反馈按钮 */
+.feedback{
+	margin: 0 auto;
+	margin-top: 3%;
+	border: 1px solid black;
+	border-radius: 25px;
+	width: 75%;
+	height: 9%;
+}
+.clothes-feedback{
+	/* 去掉button的外框默认样式 */
+	border: none;
+	background: none;
+	outline: none;
+	
+	height: 100%;
+	width: 100%;
+	
+	border-radius: 25px;
+	
+	font-size: 60px;
+	color: grey;
+	background: linear-gradient(to bottom, #FFD700, #ffffff);
+}
+
+/* 爆闪动画效果 */
+.ssr-flash{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	width: 0;
+	height: 0;
+	
+	border-radius: 50%;
+	
+	background: radial-gradient(circle,rgba(255,239,154,1) 0%, rgba(255,193,7,0) 70%);
+	z-index: 10;
+	
+	animation: flashBoom 0.8s ease-out forwards;
+}
+
+@keyframes flashBoom{
+	0%{width: 0;height: 0;opacity: 1;}
+	40%{width: 1300px;height: 1300px;opacity: 0.9;}
+	60%{width: 2000px;height: 2000px;opacity: 0.7;}
+	80%{width: 1300px;height: 1300px;opacity: 0.4;}
+	100%{width: 900px;height: 900px;opacity: 0;}
+}

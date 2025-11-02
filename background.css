@@ -27,4 +27,5 @@
 	
 	background: url("./img/背景/白鹤.png") no-repeat;
 	background-size: contain;
+	z-index: 2;
 }
