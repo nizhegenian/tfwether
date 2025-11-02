@@ -45,3 +45,9 @@
 .season-top-button:hover{
 	transform: scale(1.1);
 }
+
+/* 食物左右按钮放大 */
+.food-left-righ-button:hover{
+	transform: scale(1.4);
+	box-shadow: 2px 2px 10px gray;
+}

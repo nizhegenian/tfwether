@@ -14,698 +14,732 @@
 		<link rel="stylesheet" href="footer.css"/>
 		<link rel="stylesheet" href="slideCard.css"/>
 		<link rel="stylesheet" href="background.css"/>
+		<link rel="stylesheet" href="choseCard.css"/>
 		<script src="js/jQuery.js"></script>
 		<script src="slideCard.js"></script>
+		<script src="choseCard.js"></script>
 	</head>
 	<body>
-		<!-- 判断用户是否登录 -->
-		<script>
-			// 如果没有loggedin
-			if(!sessionStorage.getItem('isLoggedIn')){
-				console.log("没登录成功，又跳转回去了。");
-				window.location.href='logging.html';
-			}else{
-				var username=sessionStorage.getItem("username");//获取本次的用户名
-				var password = sessionStorage.getItem("password");//获取本次的密码
-			}
-		</script>
+		<!-- 跳出的卡片 -->
+		<div class="jump-card">
+			<div class="jump-card-all">
+				<div class="close-card"><img src="./图标/关闭按钮.png" class="close-card-img"></div>
+				<div class="clothes-content"></div>
+			</div>
+		</div>
 		
-		<header class="container headered">
-			<div class="header-up">
-				<div class="header-up-img">
-					<img src="./img/icong备选.png"/>
-				</div>
-				<div class="header-up-text">中式二十四节气 * 春 * 夏 * 秋 * 冬</div>
-				
-			</div>
-			<hr>
-			<!-- 导航栏 -->
-			<div class="header-down">
-				<table class="header-down-table table-canter-maxwidth">
-					<tr class="header-down-overflow">
-						<td class="text-color-hover text-under-red-line">首页</td>
-						<td class="text-color-hover text-under-red-line">文化内涵</td>
-						<td class="text-color-hover text-under-red-line">节气指南</td>
-						<td class="text-color-hover text-under-red-line">食间物语</td>
-						<td class="text-color-hover text-under-red-line">掩卷长思</td>
-					</tr>
-				</table>
-			</div>
-			</header>
-			
-			<div class="bg-left-tree"></div>
-			<!-- section1:标题-两张左右排布的图片 -->
-			<section class="container">
-				<div class="section-1-title-image">
-					<div class="section-1">
-						<img src="图标/标题括号.png">
-						<div class="section-1-title text-color-hover">二十四节气</div>
-						<img src="图标/标题括号-右.png"/>
-					</div>
-					<div class="green-leaf"></div>
-				</div>
-			</section>
-			
-			<!-- section2:四个标题框 -->
-			<section class="container">
-				<table class="table-canter-maxwidth section2-table">
-					<tr>
-						<td class="section2-weather image-opacity-max image-title-reverse">春</td>
-						<td class="section2-weather image-opacity-max image-title-reverse">夏</td>
-						<td class="section2-weather image-opacity-max image-title-reverse">秋</td>
-						<td class="section2-weather image-opacity-max image-title-reverse">冬</td>
-					</tr>
-				</table>
-			</section>
-			
-			<div class="bg-green-bird"></div>
-			
-			<!-- section3:两个图片左右排列 -->
-			<section class="container">
-				<table class="section3">
-					<tr>
-						<!-- 左边24节气图 -->
-						<td class="section3-td-image"><img src="./img/首页大图.png" class="image-border-radius scale-bigger"/></td>
-						<!-- 右边的更多展览 -->
-						<td class="section3-text image-border-radius">
-							<div class="section3-text-title"><img src="图标/龙腾云驾雾-金色.png">民俗非遗——24节气</div><br>
-							<div class="section3-text-text">24节气是民间反映天气变化的一种节令，划分为二十四个是为了更好区分每个节气表现出来的天气特点，从立春到大寒，然后一个轮回一个轮回的交替。</div>
-							<img src="图标/标题括号.png" class="section3-text-image"><span class="section3-text-span">  |  <span><img src="图标/标题括号-右.png" class="section3-text-image">
-						</td>
-					</tr>
-				</table>
-			</section>
-			
-			
-			<!-- section4:文化内涵 -->
-			<section class="container">
-				<div class="section-1-title-image">
-					<div class="section-1">
-						<img src="图标/标题括号.png">
-						<div class="section-1-title text-color-hover">文化内涵</div>
-						<img src="图标/标题括号-右.png"/>
-					</div>
-					<div class="green-leaf"></div>
-				</div>
-			</section>
-			
-			<!-- section5:春联图couplut-image -->
-			<section>
-				<div class="couplut-div">
-					<!-- 左侧的春联 -->
-					<div class="couplut-left couplut-left-right ">
-						<div class="slide-up slide-up-left"></div>
-						<div class="couplut-left-down couplut-aside slide slide-left">年年順景財源廣</div>
-					</div>
-					<!-- 中间的卡片 -->
-					<div class="couplut-middle-card">
-						<!-- 中间上面的卡片 -->
-						<div class="couplut-middle-up">
-							<div class="couplut-middle-up-on couplut-middle-up-all">
-								<h2 class="couplut-middle-up-title couplut-middle-text">二十四节气的文化哲学与时代意蕴</h2>
-								<p class="couplut-middle-up-p-1 couplut-middle-text">中国传统的二十四节气是古代先民伟大智慧的结晶，其虽以纪时体系的面目出现，但对中国文化的形成却产生着广泛而深刻的影响，至今仍发挥着指导农业生产和民众养生去疾的巨大作用。</p>
-								<p class="couplut-middle-up-p-2 couplut-middle-text">二十四节气本由两部分组成，从冬至开始，每隔一气的大寒、雨水、春分、谷雨、小满、夏至、大暑、处暑、秋分、霜降、小雪十二个叫气或中气，其余的小寒、立春、惊蛰、清明、立夏、芒种、小暑、立秋、白露、寒露、立冬、大雪十二个叫节或节气。</p>
-							</div>
-							<div class="couplut-middle-up-under couplut-middle-up-all">
-								<h2 class="couplut-middle-up-title couplut-middle-text">健康养生与农事活动</h2>
-								<p class="couplut-middle-up-p-1 couplut-middle-text">二十四节气也与人体健康和养生密切相关。根据节气的不同，人们会有相应的饮食、起居、穿着等调整，以适应气候变化，增强体质，预防疾病。比如，立夏时要注意清热解暑，白露时要注意养阴润燥等。</p>
-								<p class="couplut-middle-up-p-2 couplut-middle-text">二十四节气在农业生产中起到了重要的指导作用。每个节气都标志着某种农事活动的开始或结束，如立春是春耕的开始，芒种是夏季农作物的开始收割，立秋是秋季农事的起点等。这种农事时间的划分有助于农民们合理安排农事活动，提高农作物的产量。</p>
-							</div>
-						</div>
-						<!-- 中间下面的四个小图片 -->
-						<div class="couplut-middle-down">
-							<div class="couplut-middle-down-1 couplut-middle-down-image">春</div>
-							<div class="couplut-middle-down-2 couplut-middle-down-image">夏</div>
-							<div class="couplut-middle-down-3 couplut-middle-down-image">秋</div>
-							<div class="couplut-middle-down-4 couplut-middle-down-image">冬</div>
-						</div>
-					</div>
-					<!-- 右侧的春联 -->
-					<div class="couplut-right couplut-left-right">
-						<div class="slide-up slide-up-right"></div>
-						<div class="couplut-right-down couplut-aside slide slide-right">歲歲平安福壽多</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- 春联交互动画 : 当鼠标挪动到春联杠时，春联下滑-->
+		<div class="all">
+			<!-- 判断用户是否登录 -->
 			<script>
-				//animate效果
-				$('.slide-up-left').click(function(){//监听春联杠
-					$('.slide-left').animate({
-						width:"28%",
-						height:"2600"
-					},2000,function(){
-						console.log("春联下拉成功-左");
-					});
-				});
-				$(".slide-up-right").click(function(){
-					$(".slide-right").animate({
-						width:"28%",
-						height:"2600"
-					},2000,function(){
-						console.log("春联下拉成功-右");
-					});
-				});
+				// 如果没有loggedin
+				if(!sessionStorage.getItem('isLoggedIn')){
+					console.log("没登录成功，又跳转回去了。");
+					window.location.href='logging.html';
+				}else{
+					var username=sessionStorage.getItem("username");//获取本次的用户名
+					var password = sessionStorage.getItem("password");//获取本次的密码
+				}
 			</script>
 			
-			<!-- section6:节气指南 -->
-			<section class="container">
-				<div class="section-1-title-image">
-					<div class="section-1">
-						<img src="图标/标题括号.png">
-						<div class="section-1-title text-color-hover">节气指南</div>
-						<img src="图标/标题括号-右.png"/>
+			<header class="container headered">
+				<div class="header-up">
+					<div class="header-up-img">
+						<img src="./img/icong备选.png"/>
 					</div>
-					<div class="green-leaf"></div>
+					<div class="header-up-text">中式二十四节气 * 春 * 夏 * 秋 * 冬</div>
+					
 				</div>
-			</section>
-			
-			<!-- section7:节气指南,各个节气标签 -->
-			<section  class="container">
-				<!-- 最外层的div：用来放置整一块的内容 -->
-				<div class="season-pointer-div">
-					<!-- 顶部文字层div -->
-					<div class="season-top-text">
-						<p>穿越时光的韵律，邂逅二十四位节气仙子。这里，每一张卡片都是一扇通往不同光阴的门扉，藏着惊蛰的春雷、清明的杏花、霜降的枫红。
-						我们以画笔为引，为古老时令注入灵魂，化作风格各异的灵动形象。她们或执扇而立，或携雨而来，静候您的驻足。现在，请开启您的缘分，挑选那位与您心意相通的时间使者吧。</p>
-					</div>
-					<!-- 抽卡按钮 -->
-					<div class="season-top-button-div">
-						<button class="season-top-button">开始抽卡</button>
-					</div>
-					
-					<!-- 用来放置上半部分的内容 -->
-					<div class="season-pointer-div-up">
-						<!-- 用来放置一小块的内容 -->
-						<div class="season-pointer-little season-people-1  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">立春</p>
-								<p class="season-pointer-p">2月3-4日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-2  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">雨水</p>
-								<p class="season-pointer-p">2月18-19日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-3  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">惊蛰</p>
-								<p class="season-pointer-p">3月5-6日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-4  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">春分</p>
-								<p class="season-pointer-p">3月20-21日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-5  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">清明</p>
-								<p class="season-pointer-p">4月4-5日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-6 scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">谷雨</p>
-								<p class="season-pointer-p">4月19-20日</p>
-							</div>
-						</div>
-					</div>
-					<!-- 用来放置下半部分的内容 -->
-					<div class="season-pointer-div-down">
-						<!-- 用来放置一小块的内容 -->
-						<div class="season-pointer-little season-people-down-1  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">立夏</p>
-								<p class="season-pointer-p">5月5-6日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-down-2  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">小满</p>
-								<p class="season-pointer-p">5月20-21日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-down-3  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">芒种</p>
-								<p class="season-pointer-p">6月5-6日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-down-4  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">夏至</p>
-								<p class="season-pointer-p">6月21-22日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-down-5  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">小暑</p>
-								<p class="season-pointer-p">7月6-7日</p>
-							</div>
-						</div>
-						<div class="season-pointer-little season-people-down-6  scale-bigger">
-							<!-- 用来放置文字 -->
-							<div class="season-pointer-text">
-								<p class="season-pointer-title">大暑</p>
-								<p class="season-pointer-p">7月22-23日</p>
-							</div>
-						</div>
-					</div>
+				<hr>
+				<!-- 导航栏 -->
+				<div class="header-down">
+					<table class="header-down-table table-canter-maxwidth">
+						<tr class="header-down-overflow">
+							<td class="text-color-hover text-under-red-line">首页</td>
+							<td class="text-color-hover text-under-red-line">文化内涵</td>
+							<td class="text-color-hover text-under-red-line">节气指南</td>
+							<td class="text-color-hover text-under-red-line">食间物语</td>
+							<td class="text-color-hover text-under-red-line">掩卷长思</td>
+						</tr>
+					</table>
 				</div>
-			</section>
-			
-			<!-- section8:食间物语 -->
-			<section class="container">
-				<div class="section-1-title-image">
-					<div class="section-1">
-						<img src="图标/标题括号.png">
-						<div class="section-1-title text-color-hover">食间物语</div>
-						<img src="图标/标题括号-右.png"/>
-					</div>
-					<div class="green-leaf"></div>
-				</div>
-			</section>
-			
-			<!-- section9:食物推荐 -->
-			<section class="container food-container-section">
-				<div class="food-container">
-					<!-- 食物外层的大盒子div -->
-					<div class="food-div food-silde-current food-silde-next active">
-						<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
-						<div class="food-left-div">
-							<!-- 文字 -->
-							<div class="food-left-div-text">
-								<!-- 标题 -->
-								<div class="food-left-div-title">立春到了，吃啥呢</div>
-								<!-- 内容 -->
-								<p class="food-left-div-p">菠菜猪肝汤 是一道传统滋补汤品，主要作用包括 补血养肝、护眼明目、增强免疫力 以及 滋阴润燥。 
-								其功效源于菠菜和猪肝的营养互补，适合贫血、用眼过度及体虚人群适量食用。
-								菠菜富含 铁元素 和 叶酸，猪肝含有丰富的 血红素铁 和 维生素B12，两者结合可有效改善缺铁性贫血，促进血红蛋白合成。 </p>
-							</div>
-							<!-- 图片 -->
-							<img src="./img/食物/人物烹调食物.png" class="food-left-image"/>
-						</div>
-						<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
-						<div class="food-middle-image">
-							<div class="food-middle-up">
-								<!-- 食物左键按钮 -->
-								<div class="food-left-button food-left-righ-button">敛身</div>
-								<!-- 食物图片 -->
-								<div class="food-image"><img src="./img/食物/菠菜猪肝汤.png" class="food-image-img"></div>
-								<!-- 食物右键按钮 -->
-								<div class="food-right-button food-left-righ-button">进履</div>
-							</div>
-							<div class="food-middle-button">菠菜猪肝汤</div>
-							<div class="food-function">
-								<div class="food-func-left">
-									<div  class="food-func-title">功效一：</div>
-									<div class="food-func-p">生血养血，补血养肝，改善视力与护眼功能</div>
-								</div>
-								<div class="food-func-right">
-									<div class="food-func-title">功效二：</div>
-									<div class="food-func-p">润燥滑肠，增强免疫力与抗氧化能力</div>
-								</div>
-							</div>
-						</div>
-						<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
-						<div class="food-right-div">
-							<!-- 第一块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤一</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>猪肝处理</strong><br>
-									• 切去筋膜：猪肝洗净后切2毫米薄片，剔除筋膜。🔪<br>
-									• 浸泡去血：清水泡20min，期间换水2次，至水变清。💧<br>
-									• 腌制去腥：沥水，加料酒、姜、淀粉抓匀，腌15min。🧂<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/菠菜猪肝汤做法步骤1.png" class="food-right-image">
-								</div>
-							</div>
-							<!-- 第二块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤二</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>菠菜处理</strong><br>
-										• 菠菜洗净切段，根部与叶子分开放。🥬<br>
-										• 焯水去草酸：水烧开加1勺油和半勺盐，先放入菠菜根焯30秒，再放叶子焯10秒，捞出过凉水。🌊<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/菠菜猪肝汤做法步骤2.png" class="food-right-image">
-								</div>
-							</div>
-							<!-- 第三块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤三</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>煮汤</strong><br>
-									• 煮猪肝和汤底：锅中加清水，烧开转小火，放猪肝，煮至变色浮起，捞出备用。🐷然后加入姜丝，煮香。🧄️<br>
-									• 下菠菜：放入焯好的菠菜，煮软。🥬️<br>
-									• 混合调味：倒入猪肝，加盐、白胡椒粉调味，滴香油即可。🛢️<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/菠菜猪肝汤做法步骤3.png" class="food-right-image">
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!-- 食物外层的大盒子div-2 -->
-					<div class="food-div food-silde-next">
-						<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
-						<div class="food-left-div">
-							<!-- 文字 -->
-							<div class="food-left-div-text">
-								<!-- 标题 -->
-								<div class="food-left-div-title">雨水到了，吃啥呢</div>
-								<!-- 内容 -->
-								<p class="food-left-div-p">罐罐肉，又称坛子肉，是民间传统菜肴，流行于四川地区，上世纪80、90年代在渠县卷硐乡街道尤为盛行。 
-								该菜肴以沙罐为容器，采用微火慢煮的传统技法制作。 
-								其主料为猪蹄、猪腿，经洗净、去毛、微火烧烤后切块，配以黄豆或白豆、糯米及生姜、大蒜等佐料，加水置于沙罐中焖炖。 
-								制作时需将沙罐埋入暗燃料堆整夜焖制，成品味香软滑，适宜老年人食用。 </p>
-							</div>
-							<!-- 图片 -->
-							<img src="./img/食物/人物烹调食物2.png" class="food-left-image"/>
-						</div>
-						<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
-						<div class="food-middle-image">
-							<div class="food-middle-up">
-								<!-- 食物左键按钮 -->
-								<div class="food-left-button food-left-righ-button">敛身</div>
-								<!-- 食物图片 -->
-								<div class="food-image"><img src="./img/食物/罐罐肉.png"  class="food-image-img"></div>
-								<!-- 食物右键按钮 -->
-								<div class="food-right-button food-left-righ-button">进履</div>
-							</div>
-							<div class="food-middle-button">罐罐肉</div>
-							<div class="food-function">
-								<div class="food-func-left">
-									<div  class="food-func-title">功效一：</div>
-									<div class="food-func-p">滋补强身，恢复体力,补益气血、恢复体力</div>
-								</div>
-								<div class="food-func-right">
-									<div class="food-func-title">功效二：</div>
-									<div class="food-func-p">健脾养胃，易于消化,有暖胃、促进食欲的功效</div>
-								</div>
-							</div>
-						</div>
-						<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
-						<div class="food-right-div">
-							<!-- 第一块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤一</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>猪肉处理</strong><br>
-									• 趁着猪肉新鲜劲，直接先改刀腌制，基本上1斤肉约放11—15G盐（为了增加风味可加入花椒、香叶、八角等）。<br>
-									• 腌制24—48H后开始清洗，滤干。可以使用厨房纸吸水，吹风吹干。<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/罐罐肉做法1.png" class="food-right-image">
-								</div>
-							</div>
-							<!-- 第二块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤二</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>菠菜处理</strong><br>
-										• 炼制猪油，因为买少了，添加了一部分植物油。加入肉炸干水分（如果炸的过程中有泡沫析出，就是水分再变干的过程）<br>
-										• 要是锅大基本上就是浮起来就行，家里看榨至琥珀色即可。可以把肉皮多炸一炸<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/罐罐肉做法2.png" class="food-right-image">
-								</div>
-							</div>
-							<!-- 第三块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤三</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>煮汤</strong><br>
-									• 起锅晾凉，拿一个土陶坛。猪皮朝下依次摆放。再加入油没过肉密封️<br>
-									• 封坛，我加了2层保鲜膜。放在阴凉处存放约20天风味更好️<br>
-									• 每次吃的时候取一块，炸的时候就闻着香了，喜欢的姐妹可以试一试啦！️<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/罐罐肉做法3.png" class="food-right-image">
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!-- 食物外层的大盒子div-3 -->
-					<div class="food-div food-silde-next">
-						<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
-						<div class="food-left-div">
-							<!-- 文字 -->
-							<div class="food-left-div-text">
-								<!-- 标题 -->
-								<div class="food-left-div-title">惊蛰到了，吃啥呢</div>
-								<!-- 内容 -->
-								<p class="food-left-div-p">枸杞银耳羹为药食两用之品，具有补充营养、润肺养胃、滋补肝肾等功效。 
-								1、补充营养 枸杞银耳羹含碳水化合物、蛋白质、无机盐、维生素B和胡萝卜素等营养成分，能帮助机体补充营养。
-								 2、润肺养胃 银耳味甘，性平，归肺、胃经，能滋阴润肺、养胃生津。 </p>
-							</div>
-							<!-- 图片 -->
-							<img src="./img/食物/人物烹调食物3.png" class="food-left-image"/>
-						</div>
-						<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
-						<div class="food-middle-image">
-							<div class="food-middle-up">
-								<!-- 食物左键按钮 -->
-								<div class="food-left-button food-left-righ-button">敛身</div>
-								<!-- 食物图片 -->
-								<div class="food-image"><img src="./img/食物/枸杞银耳羹.png"  class="food-image-img"></div>
-								<!-- 食物右键按钮 -->
-								<div class="food-right-button food-left-righ-button">进履</div>
-							</div>
-							<div class="food-middle-button">枸杞银耳羹</div>
-							<div class="food-function">
-								<div class="food-func-left">
-									<div  class="food-func-title">功效一：</div>
-									<div class="food-func-p">补充营养，润肺养胃，滋补肝肾</div>
-								</div>
-								<div class="food-func-right">
-									<div class="food-func-title">功效二：</div>
-									<div class="food-func-p">益精明目，增强免疫力与抗氧化能力</div>
-								</div>
-							</div>
-						</div>
-						<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
-						<div class="food-right-div">
-							<!-- 第一块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤一</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>预处理食材</strong><br>
-									• 干银耳冷水浸泡1-2小时（温水加速泡发），去根撕小朵，加面粉搓洗去杂质<br>
-									• 雪梨处理：去皮去核切块（保留皮增香需彻底洗净）<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/枸杞银耳羹做法1.png" class="food-right-image">
-								</div>
-							</div>
-							<!-- 第二块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤二</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>炖煮方法</strong><br>
-										• 银耳+清水（比例1:5）大火煮沸，搅拌15秒助出胶，转小火炖40分钟<br>
-										• 加雪梨、冰糖、红枣，续炖30分钟至银耳软烂；<br>
-										• 关火前5分钟加枸杞，避免煮烂<br>
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/枸杞银耳羹做法2.png" class="food-right-image">
-								</div>
-							</div>
-							<!-- 第三块内容 -->
-							<div class="food-right-text-image">
-								<!-- 大标题 -->
-								<div class="food-right-top-title">步骤三</div>
-								<!-- 内容 -->
-								<p class="food-right-top-p">
-									<strong>调味与保存</strong><br>
-									• 甜度调整：冷藏后甜味减弱，可略多放冰糖️<br>
-									• 食用建议：热饮润肺，冰镇解暑，当日食用最佳（银耳过夜易变质）️<br>									
-								</p>
-								<div class="food-right-image-div">
-									<img src="./img/食物/枸杞银耳羹做法3.png" class="food-right-image">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- 点击切换食物效果 -->
-			<script>
-				//拿到第一张图片
-				var silde = $(".food-silde-current");//永远的第一张图片
-				var current = silde.first();//当前图片
-				var next = current.next(".food-silde-next");//所有大标签都包含next,这样才能轮播
-				current.addClass("active");//确保当前显示
-				//如果遇到左键点击事件
-				$(".food-left-button").click(function(){
-					switchSlide();
-				});
-				function switchSlide(){
-					//隐藏当前图片
-					current.removeClass('active');
-					
-					//切换下一张图片
-					next = current.next(".food-silde-next");//next下一张
-					//最后一张图片
-					if(next.length === 0){
-						//next回到第一张
-						next = silde.first();
-						console.log("next回到第一张,next的长度"+next.length);
-					}
-					next.addClass('active');//活跃显示
-					
-					//current和next的切换
-					current = next;//current下一张
-					console.log("current已切换"+current.length);
-					
-					
-					console.log("next已切换"+next.length);
-				};
-				//如果遇到右键点击事件
-				$(".food-right-button").click(function(){
-					//隐藏当前图片
-					current.removeClass('active');
-					
-					//切换下一张图片
-					next = current.next(".food-silde-next");//next下一张
-					//最后一张图片
-					if(next.length === 0){
-						//next回到第一张
-						next = silde.first();
-						console.log("next回到第一张,next的长度"+next.length);
-					}
-					
-					next.addClass('active');//活跃显示
-					
-					//current和next的切换
-					current = next;//current下一张
-					console.log("current已切换"+current.length);
-					
-					
-					console.log("next已切换"+next.length);
-				});
+				</header>
 				
-			</script>
-			
-			<!-- section10:掩卷长思 -->
-			<section class="container">
-				<div class="section-1-title-image">
-					<div class="section-1">
-						<img src="图标/标题括号.png">
-						<div class="section-1-title text-color-hover">掩卷长思</div>
-						<img src="图标/标题括号-右.png"/>
+				<div class="bg-left-tree"></div>
+				<!-- section1:标题-两张左右排布的图片 -->
+				<section class="container">
+					<div class="section-1-title-image slide-to-top">
+						<div class="section-1">
+							<img src="图标/标题括号.png">
+							<div class="section-1-title text-color-hover">二十四节气</div>
+							<img src="图标/标题括号-右.png"/>
+						</div>
+						<div class="green-leaf"></div>
 					</div>
-					<div class="green-leaf"></div>
-				</div>
-			</section>
-			
-			<!-- section11:结尾的一些联系啥的 -->
-			<footer>
-				<!-- 页脚最外层div -->
-				<div class="footer-all">
-					<!-- 中层div控制整体大小 -->
-					<div class="footer-width">
-						<!-- 三列-1 -->
-						<div class="footer-col">
-							<div class="footer-title">商业板块</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚握手.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">合作联系</a>
+				</section>
+				
+				<!-- section2:四个标题框 -->
+				<section class="container">
+					<table class="table-canter-maxwidth section2-table">
+						<tr>
+							<td class="section2-weather image-opacity-max image-title-reverse slide-to-top-2">春</td>
+							<td class="section2-weather image-opacity-max image-title-reverse slide-to-top">夏</td>
+							<td class="section2-weather image-opacity-max image-title-reverse slide-to-top-2">秋</td>
+							<td class="section2-weather image-opacity-max image-title-reverse slide-to-top">冬</td>
+						</tr>
+					</table>
+				</section>
+				
+				<div class="bg-green-bird slide-right-left"></div>
+				
+				<!-- section3:两个图片左右排列 -->
+				<section class="container">
+					<table class="section3">
+						<tr>
+							<!-- 左边24节气图 -->
+							<td class="section3-td-image slide-to-top"><img src="./img/首页大图.png" class="image-border-radius scale-bigger"/></td>
+							<!-- 右边的更多展览 -->
+							<td class="section3-text image-border-radius slide-to-top-2">
+								<div class="section3-text-title"><img src="图标/龙腾云驾雾-金色.png">民俗非遗——24节气</div><br>
+								<div class="section3-text-text">24节气是民间反映天气变化的一种节令，划分为二十四个是为了更好区分每个节气表现出来的天气特点，从立春到大寒，然后一个轮回一个轮回的交替。</div>
+								<img src="图标/标题括号.png" class="section3-text-image"><span class="section3-text-span">  |  <span><img src="图标/标题括号-右.png" class="section3-text-image">
+							</td>
+						</tr>
+					</table>
+				</section>
+				
+				
+				<!-- section4:文化内涵 -->
+				<section class="container">
+					<div class="section-1-title-image slide-img">
+						<div class="section-1">
+							<img src="图标/标题括号.png">
+							<div class="section-1-title text-color-hover">文化内涵</div>
+							<img src="图标/标题括号-右.png"/>
+						</div>
+						<div class="green-leaf"></div>
+					</div>
+				</section>
+				
+				<!-- section5:春联图couplut-image -->
+				<section>
+					<div class="couplut-div">
+						<!-- 左侧敦煌人物 -->
+						<div class="people-left-right"><img src="./img/文化内涵/敦煌琵琶.png" class="people-left"></div>
+						<!-- 左侧的春联 -->
+						<div class="couplut-left couplut-left-right ">
+							<div class="slide-up slide-up-left"></div>
+							<div class="couplut-left-down couplut-aside slide slide-left">年年順景財源廣</div>
+						</div>
+						<!-- 中间的卡片 -->
+						<div class="couplut-middle-card">
+							<!-- 中间上面的卡片 -->
+							<div class="couplut-middle-up">
+								<div class="couplut-middle-up-on couplut-middle-up-all slide-img">
+									<h2 class="couplut-middle-up-title couplut-middle-text">二十四节气的文化哲学与时代意蕴</h2>
+									<p class="couplut-middle-up-p-1 couplut-middle-text">中国传统的二十四节气是古代先民伟大智慧的结晶，其虽以纪时体系的面目出现，但对中国文化的形成却产生着广泛而深刻的影响，至今仍发挥着指导农业生产和民众养生去疾的巨大作用。</p>
+									<p class="couplut-middle-up-p-2 couplut-middle-text">二十四节气本由两部分组成，从冬至开始，每隔一气的大寒、雨水、春分、谷雨、小满、夏至、大暑、处暑、秋分、霜降、小雪十二个叫气或中气，其余的小寒、立春、惊蛰、清明、立夏、芒种、小暑、立秋、白露、寒露、立冬、大雪十二个叫节或节气。</p>
+								</div>
+								<div class="couplut-middle-up-under couplut-middle-up-all slide-img">
+									<h2 class="couplut-middle-up-title couplut-middle-text">健康养生与农事活动</h2>
+									<p class="couplut-middle-up-p-1 couplut-middle-text">二十四节气也与人体健康和养生密切相关。根据节气的不同，人们会有相应的饮食、起居、穿着等调整，以适应气候变化，增强体质，预防疾病。比如，立夏时要注意清热解暑，白露时要注意养阴润燥等。</p>
+									<p class="couplut-middle-up-p-2 couplut-middle-text">二十四节气在农业生产中起到了重要的指导作用。每个节气都标志着某种农事活动的开始或结束，如立春是春耕的开始，芒种是夏季农作物的开始收割，立秋是秋季农事的起点等。这种农事时间的划分有助于农民们合理安排农事活动，提高农作物的产量。</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚聊天.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">商业联系</a>
-							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚吐槽.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">吐槽</a>
-							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚点赞.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">好评</a>
+							<!-- 中间下面的四个小图片 -->
+							<div class="couplut-middle-down">
+								<div class="couplut-middle-down-1 couplut-middle-down-image slide-img">春</div>
+								<div class="couplut-middle-down-2 couplut-middle-down-image slide-img">夏</div>
+								<div class="couplut-middle-down-3 couplut-middle-down-image slide-img">秋</div>
+								<div class="couplut-middle-down-4 couplut-middle-down-image slide-img">冬</div>
 							</div>
 						</div>
-						<!-- 三列-2 -->
-						<div class="footer-col">
-							<div class="footer-title">学生板块</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚学生.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">学生认证</a>
+						<!-- 右侧的春联 -->
+						<div class="couplut-right couplut-left-right">
+							<div class="slide-up slide-up-right"></div>
+							<div class="couplut-right-down couplut-aside slide slide-right">歲歲平安福壽多</div>
+						</div>
+						
+						<!-- 右侧敦煌敲鼓 -->
+						<div class=" people-left-right"><img src="./img/文化内涵/敦煌敲鼓.png" class="people-right"></div>
+					</div>
+				</section>
+				
+				<!-- 春联交互动画 : 当鼠标挪动到春联杠时，春联下滑-->
+				<script>
+					//animate效果
+					$('.slide-up-left').click(function(){//监听春联杠
+						$('.slide-left').animate({
+							width:"28%",
+							height:"2600",
+							opacity: "1",
+						},2000,function(){
+							console.log("春联下拉成功-左");
+						});
+					});
+					$(".slide-up-right").click(function(){
+						$(".slide-right").animate({
+							width:"28%",
+							height:"2600",
+							opacity: "1",
+						},2000,function(){
+							console.log("春联下拉成功-右");
+						});
+					});
+				</script>
+				
+				<!-- section6:节气指南 -->
+				<section class="container">
+					<div class="section-1-title-image slide-img">
+						<div class="section-1">
+							<img src="图标/标题括号.png">
+							<div class="section-1-title text-color-hover">节气指南</div>
+							<img src="图标/标题括号-右.png"/>
+						</div>
+						<div class="green-leaf"></div>
+					</div>
+				</section>
+				
+				
+				
+				<!-- section7:节气指南,各个节气标签 -->
+				<section  class="container">
+					<!-- 最外层的div：用来放置整一块的内容 -->
+					<div class="season-pointer-div">
+						<!-- 顶部文字层div -->
+						<div class="season-top-text">
+							<p>穿越时光的韵律，邂逅二十四位节气仙子。这里，每一张卡片都是一扇通往不同光阴的门扉，藏着惊蛰的春雷、清明的杏花、霜降的枫红。
+							我们以画笔为引，为古老时令注入灵魂，化作风格各异的灵动形象。她们或执扇而立，或携雨而来，静候您的驻足。现在，请开启您的缘分，挑选那位与您心意相通的时间使者吧。</p>
+						</div>
+						<!-- 抽卡按钮 -->
+						<div class="season-top-button-div slide-img">
+							<button class="season-top-button chose-card">开始抽卡</button>
+						</div>
+						
+						<!-- 用来放置上半部分的内容 -->
+						<div class="season-pointer-div-up slide-img-2">
+							<!-- 用来放置一小块的内容 -->
+							<div class="season-pointer-little season-people-1  scale-bigger ">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">立春</p>
+									<p class="season-pointer-p">2月3-4日</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚高校.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">高校认证</a>
+							<div class="season-pointer-little season-people-2  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">雨水</p>
+									<p class="season-pointer-p">2月18-19日</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚爱好者聚集地.png" class="footer-p-image"/>
-								<a href="https://www.jingqu.wang/" class="footer-text">景点推荐</a>
+							<div class="season-pointer-little season-people-3  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">惊蛰</p>
+									<p class="season-pointer-p">3月5-6日</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚点赞.png" class="footer-p-image"/>
-								<a href="https://www.dpm.org.cn/Creative.html" class="footer-text">文创购买</a>
+							<div class="season-pointer-little season-people-4  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">春分</p>
+									<p class="season-pointer-p">3月20-21日</p>
+								</div>
+							</div>
+							<div class="season-pointer-little season-people-5  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">清明</p>
+									<p class="season-pointer-p">4月4-5日</p>
+								</div>
+							</div>
+							<div class="season-pointer-little season-people-6 scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">谷雨</p>
+									<p class="season-pointer-p">4月19-20日</p>
+								</div>
 							</div>
 						</div>
-						<!-- 三列-3 -->
-						<div class="footer-col">
-							<div class="footer-title">友情链接</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚爱好者聚集地.png" class="footer-p-image"/>
-								<a href="http://www.feiyihuaxia.com/" class="footer-text">聚集地</a>
+						<!-- 用来放置下半部分的内容 -->
+						<div class="season-pointer-div-down">
+							<!-- 用来放置一小块的内容 -->
+							<div class="season-pointer-little season-people-down-1  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">立夏</p>
+									<p class="season-pointer-p">5月5-6日</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚传承人.png" class="footer-p-image"/>
-								<a href="https://www.ihchina.cn/representative" class="footer-text">传承人</a>
+							<div class="season-pointer-little season-people-down-2  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">小满</p>
+									<p class="season-pointer-p">5月20-21日</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚吐槽.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">小游戏</a>
+							<div class="season-pointer-little season-people-down-3  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">芒种</p>
+									<p class="season-pointer-p">6月5-6日</p>
+								</div>
 							</div>
-							<div class="footer-p">
-								<img src="./图标/首页页脚/首页页脚点赞.png" class="footer-p-image"/>
-								<a href="#" class="footer-text">其他</a>
+							<div class="season-pointer-little season-people-down-4  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">夏至</p>
+									<p class="season-pointer-p">6月21-22日</p>
+								</div>
+							</div>
+							<div class="season-pointer-little season-people-down-5  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">小暑</p>
+									<p class="season-pointer-p">7月6-7日</p>
+								</div>
+							</div>
+							<div class="season-pointer-little season-people-down-6  scale-bigger">
+								<!-- 用来放置文字 -->
+								<div class="season-pointer-text">
+									<p class="season-pointer-title">大暑</p>
+									<p class="season-pointer-p">7月22-23日</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</footer>
+				</section>
+				
+				<!-- <script>
+					$(document).ready(function(){
+						$(".chose-card").click(function(){
+							//模糊背景
+							$("body").addClass("blur-background");
+						})
+					})
+				</script> -->
+				
+				<!-- section8:食间物语 -->
+				<section class="container">
+					<div class="section-1-title-image slide-img">
+						<div class="section-1">
+							<img src="图标/标题括号.png">
+							<div class="section-1-title text-color-hover">食间物语</div>
+							<img src="图标/标题括号-右.png"/>
+						</div>
+						<div class="green-leaf"></div>
+					</div>
+				</section>
+				
+				<!-- section9:食物推荐 -->
+				<section class="container food-container-section">
+					<div class="food-container">
+						<!-- 食物外层的大盒子div -->
+						<div class="food-div food-silde-current food-silde-next active">
+							<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
+							<div class="food-left-div slide-img-2">
+								<!-- 文字 -->
+								<div class="food-left-div-text">
+									<!-- 标题 -->
+									<div class="food-left-div-title">立春到了，吃啥呢</div>
+									<!-- 内容 -->
+									<p class="food-left-div-p">菠菜猪肝汤 是一道传统滋补汤品，主要作用包括 补血养肝、护眼明目、增强免疫力 以及 滋阴润燥。 
+									其功效源于菠菜和猪肝的营养互补，适合贫血、用眼过度及体虚人群适量食用。
+									菠菜富含 铁元素 和 叶酸，猪肝含有丰富的 血红素铁 和 维生素B12，两者结合可有效改善缺铁性贫血，促进血红蛋白合成。 </p>
+								</div>
+								<!-- 图片 -->
+								<img src="./img/食物/人物烹调食物.png" class="food-left-image"/>
+							</div>
+							<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
+							<div class="food-middle-image slide-img">
+								<div class="food-middle-up">
+									<!-- 食物左键按钮 -->
+									<div class="food-left-button food-left-righ-button scale-bigger">敛身</div>
+									<!-- 食物图片 -->
+									<div class="food-image"><img src="./img/食物/菠菜猪肝汤.png" class="food-image-img"></div>
+									<!-- 食物右键按钮 -->
+									<div class="food-right-button food-left-righ-button scale-bigger">进履</div>
+								</div>
+								<div class="food-middle-button">菠菜猪肝汤</div>
+								<div class="food-function">
+									<div class="food-func-left">
+										<div  class="food-func-title">功效一：</div>
+										<div class="food-func-p">生血养血，补血养肝，改善视力与护眼功能</div>
+									</div>
+									<div class="food-func-right">
+										<div class="food-func-title">功效二：</div>
+										<div class="food-func-p">润燥滑肠，增强免疫力与抗氧化能力</div>
+									</div>
+								</div>
+							</div>
+							<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
+							<div class="food-right-div slide-img-2">
+								<!-- 第一块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤一</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>猪肝处理</strong><br>
+										• 切去筋膜：猪肝洗净后切2毫米薄片，剔除筋膜。🔪<br>
+										• 浸泡去血：清水泡20min，期间换水2次，至水变清。💧<br>
+										• 腌制去腥：沥水，加料酒、姜、淀粉抓匀，腌15min。🧂<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/菠菜猪肝汤做法步骤1.png" class="food-right-image">
+									</div>
+								</div>
+								<!-- 第二块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤二</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>菠菜处理</strong><br>
+											• 菠菜洗净切段，根部与叶子分开放。🥬<br>
+											• 焯水去草酸：水烧开加1勺油和半勺盐，先放入菠菜根焯30秒，再放叶子焯10秒，捞出过凉水。🌊<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/菠菜猪肝汤做法步骤2.png" class="food-right-image">
+									</div>
+								</div>
+								<!-- 第三块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤三</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>煮汤</strong><br>
+										• 煮猪肝和汤底：锅中加清水，烧开转小火，放猪肝，煮至变色浮起，捞出备用。🐷然后加入姜丝，煮香。🧄️<br>
+										• 下菠菜：放入焯好的菠菜，煮软。🥬️<br>
+										• 混合调味：倒入猪肝，加盐、白胡椒粉调味，滴香油即可。🛢️<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/菠菜猪肝汤做法步骤3.png" class="food-right-image">
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- 食物外层的大盒子div-2 -->
+						<div class="food-div food-silde-next">
+							<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
+							<div class="food-left-div slide-img-2">
+								<!-- 文字 -->
+								<div class="food-left-div-text">
+									<!-- 标题 -->
+									<div class="food-left-div-title">雨水到了，吃啥呢</div>
+									<!-- 内容 -->
+									<p class="food-left-div-p">罐罐肉，又称坛子肉，是民间传统菜肴，流行于四川地区，上世纪80、90年代在渠县卷硐乡街道尤为盛行。 
+									该菜肴以沙罐为容器，采用微火慢煮的传统技法制作。 
+									其主料为猪蹄、猪腿，经洗净、去毛、微火烧烤后切块，配以黄豆或白豆、糯米及生姜、大蒜等佐料，加水置于沙罐中焖炖。 
+									制作时需将沙罐埋入暗燃料堆整夜焖制，成品味香软滑，适宜老年人食用。 </p>
+								</div>
+								<!-- 图片 -->
+								<img src="./img/食物/人物烹调食物2.png" class="food-left-image"/>
+							</div>
+							<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
+							<div class="food-middle-image slide-img">
+								<div class="food-middle-up">
+									<!-- 食物左键按钮 -->
+									<div class="food-left-button food-left-righ-button scale-bigger">敛身</div>
+									<!-- 食物图片 -->
+									<div class="food-image"><img src="./img/食物/罐罐肉.png"  class="food-image-img"></div>
+									<!-- 食物右键按钮 -->
+									<div class="food-right-button food-left-righ-button scale-bigger">进履</div>
+								</div>
+								<div class="food-middle-button">罐罐肉</div>
+								<div class="food-function">
+									<div class="food-func-left">
+										<div  class="food-func-title">功效一：</div>
+										<div class="food-func-p">滋补强身，恢复体力,补益气血、恢复体力</div>
+									</div>
+									<div class="food-func-right">
+										<div class="food-func-title">功效二：</div>
+										<div class="food-func-p">健脾养胃，易于消化,有暖胃、促进食欲的功效</div>
+									</div>
+								</div>
+							</div>
+							<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
+							<div class="food-right-div slide-img-2">
+								<!-- 第一块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤一</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>猪肉处理</strong><br>
+										• 趁着猪肉新鲜劲，直接先改刀腌制，基本上1斤肉约放11—15G盐（为了增加风味可加入花椒、香叶、八角等）。<br>
+										• 腌制24—48H后开始清洗，滤干。可以使用厨房纸吸水，吹风吹干。<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/罐罐肉做法1.png" class="food-right-image">
+									</div>
+								</div>
+								<!-- 第二块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤二</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>菠菜处理</strong><br>
+											• 炼制猪油，因为买少了，添加了一部分植物油。加入肉炸干水分（如果炸的过程中有泡沫析出，就是水分再变干的过程）<br>
+											• 要是锅大基本上就是浮起来就行，家里看榨至琥珀色即可。可以把肉皮多炸一炸<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/罐罐肉做法2.png" class="food-right-image">
+									</div>
+								</div>
+								<!-- 第三块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤三</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>煮汤</strong><br>
+										• 起锅晾凉，拿一个土陶坛。猪皮朝下依次摆放。再加入油没过肉密封️<br>
+										• 封坛，我加了2层保鲜膜。放在阴凉处存放约20天风味更好️<br>
+										• 每次吃的时候取一块，炸的时候就闻着香了，喜欢的姐妹可以试一试啦！️<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/罐罐肉做法3.png" class="food-right-image">
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- 食物外层的大盒子div-3 -->
+						<div class="food-div food-silde-next">
+							<!-- 食物左侧盒子：用来存放人烹调食物的图片，重点是人 -->
+							<div class="food-left-div slide-img-2">
+								<!-- 文字 -->
+								<div class="food-left-div-text">
+									<!-- 标题 -->
+									<div class="food-left-div-title">惊蛰到了，吃啥呢</div>
+									<!-- 内容 -->
+									<p class="food-left-div-p">枸杞银耳羹为药食两用之品，具有补充营养、润肺养胃、滋补肝肾等功效。 
+									1、补充营养 枸杞银耳羹含碳水化合物、蛋白质、无机盐、维生素B和胡萝卜素等营养成分，能帮助机体补充营养。
+									 2、润肺养胃 银耳味甘，性平，归肺、胃经，能滋阴润肺、养胃生津。 </p>
+								</div>
+								<!-- 图片 -->
+								<img src="./img/食物/人物烹调食物3.png" class="food-left-image"/>
+							</div>
+							<!-- 食物中间盒子：存放食物图，左键按钮和右键按钮 -->
+							<div class="food-middle-image slide-img">
+								<div class="food-middle-up">
+									<!-- 食物左键按钮 -->
+									<div class="food-left-button food-left-righ-button">敛身</div>
+									<!-- 食物图片 -->
+									<div class="food-image"><img src="./img/食物/枸杞银耳羹.png"  class="food-image-img"></div>
+									<!-- 食物右键按钮 -->
+									<div class="food-right-button food-left-righ-button">进履</div>
+								</div>
+								<div class="food-middle-button">枸杞银耳羹</div>
+								<div class="food-function">
+									<div class="food-func-left">
+										<div  class="food-func-title">功效一：</div>
+										<div class="food-func-p">补充营养，润肺养胃，滋补肝肾</div>
+									</div>
+									<div class="food-func-right">
+										<div class="food-func-title">功效二：</div>
+										<div class="food-func-p">益精明目，增强免疫力与抗氧化能力</div>
+									</div>
+								</div>
+							</div>
+							<!-- 食物右侧盒子：用来存放食物烹调的步骤图片 -->
+							<div class="food-right-div slide-img-2">
+								<!-- 第一块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤一</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>预处理食材</strong><br>
+										• 干银耳冷水浸泡1-2小时（温水加速泡发），去根撕小朵，加面粉搓洗去杂质<br>
+										• 雪梨处理：去皮去核切块（保留皮增香需彻底洗净）<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/枸杞银耳羹做法1.png" class="food-right-image">
+									</div>
+								</div>
+								<!-- 第二块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤二</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>炖煮方法</strong><br>
+											• 银耳+清水（比例1:5）大火煮沸，搅拌15秒助出胶，转小火炖40分钟<br>
+											• 加雪梨、冰糖、红枣，续炖30分钟至银耳软烂；<br>
+											• 关火前5分钟加枸杞，避免煮烂<br>
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/枸杞银耳羹做法2.png" class="food-right-image">
+									</div>
+								</div>
+								<!-- 第三块内容 -->
+								<div class="food-right-text-image">
+									<!-- 大标题 -->
+									<div class="food-right-top-title">步骤三</div>
+									<!-- 内容 -->
+									<p class="food-right-top-p">
+										<strong>调味与保存</strong><br>
+										• 甜度调整：冷藏后甜味减弱，可略多放冰糖️<br>
+										• 食用建议：热饮润肺，冰镇解暑，当日食用最佳（银耳过夜易变质）️<br>									
+									</p>
+									<div class="food-right-image-div">
+										<img src="./img/食物/枸杞银耳羹做法3.png" class="food-right-image">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- 点击切换食物效果 -->
+				<script>
+					//拿到第一张图片
+					var silde = $(".food-silde-current");//永远的第一张图片
+					var current = silde.first();//当前图片
+					var next = current.next(".food-silde-next");//所有大标签都包含next,这样才能轮播
+					current.addClass("active");//确保当前显示
+					//如果遇到左键点击事件
+					$(".food-left-button").click(function(){
+						switchSlide();
+					});
+					function switchSlide(){
+						//隐藏当前图片
+						current.removeClass('active');
+						
+						//切换下一张图片
+						next = current.next(".food-silde-next");//next下一张
+						//最后一张图片
+						if(next.length === 0){
+							//next回到第一张
+							next = silde.first();
+							console.log("next回到第一张,next的长度"+next.length);
+						}
+						next.addClass('active');//活跃显示
+						
+						//current和next的切换
+						current = next;//current下一张
+						console.log("current已切换"+current.length);
+						
+						
+						console.log("next已切换"+next.length);
+					};
+					//如果遇到右键点击事件
+					$(".food-right-button").click(function(){
+						//隐藏当前图片
+						current.removeClass('active');
+						
+						//切换下一张图片
+						next = current.next(".food-silde-next");//next下一张
+						//最后一张图片
+						if(next.length === 0){
+							//next回到第一张
+							next = silde.first();
+							console.log("next回到第一张,next的长度"+next.length);
+						}
+						
+						next.addClass('active');//活跃显示
+						
+						//current和next的切换
+						current = next;//current下一张
+						console.log("current已切换"+current.length);
+						
+						
+						console.log("next已切换"+next.length);
+					});
+					
+				</script>
+				
+				<!-- section10:掩卷长思 -->
+				<section class="container slide-img-2">
+					<div class="section-1-title-image">
+						<div class="section-1">
+							<img src="图标/标题括号.png">
+							<div class="section-1-title text-color-hover">掩卷长思</div>
+							<img src="图标/标题括号-右.png"/>
+						</div>
+						<div class="green-leaf"></div>
+					</div>
+				</section>
+				
+				<!-- section11:结尾的一些联系啥的 -->
+				<footer>
+					<!-- 页脚最外层div -->
+					<div class="footer-all">
+						<!-- 中层div控制整体大小 -->
+						<div class="footer-width">
+							<!-- 三列-1 -->
+							<div class="footer-col">
+								<div class="footer-title">商业板块</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚握手.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">合作联系</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚聊天.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">商业联系</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚吐槽.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">吐槽</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚点赞.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">好评</a>
+								</div>
+							</div>
+							<!-- 三列-2 -->
+							<div class="footer-col">
+								<div class="footer-title">学生板块</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚学生.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">学生认证</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚高校.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">高校认证</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚爱好者聚集地.png" class="footer-p-image"/>
+									<a href="https://www.jingqu.wang/" class="footer-text">景点推荐</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚点赞.png" class="footer-p-image"/>
+									<a href="https://www.dpm.org.cn/Creative.html" class="footer-text">文创购买</a>
+								</div>
+							</div>
+							<!-- 三列-3 -->
+							<div class="footer-col">
+								<div class="footer-title">友情链接</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚爱好者聚集地.png" class="footer-p-image"/>
+									<a href="http://www.feiyihuaxia.com/" class="footer-text">聚集地</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚传承人.png" class="footer-p-image"/>
+									<a href="https://www.ihchina.cn/representative" class="footer-text">传承人</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚吐槽.png" class="footer-p-image"/>
+									<a href="#" class="footer-text">小游戏</a>
+								</div>
+								<div class="footer-p">
+									<img src="./图标/首页页脚/首页页脚点赞.png" class="footer-p-image"/>
+									<a href="./wish/wish.html" class="footer-text">其他</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<!-- 遮罩层 -->
+				<div class="overlay"></div>
+		</div>
+		<!-- ssr爆闪动画效果 -->
+		<div class="ssr-flash" id="ssrFlash"></div>
 			
 	</body>
 </html>

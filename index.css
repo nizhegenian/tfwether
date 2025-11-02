@@ -3,14 +3,8 @@ html{
 	margin: 0 auto;
 }
 body{
-	margin: 0;
-	padding: 0;
-	position: relative;
-	
-	background: url("./img/背景/宣纸.jpg");
-	background-size: cover;
-	
-	/* opacity: 0.4; */
+	margin: 0px;
+	padding: 0px;
 }
 .headered{
 	/* position: fixed;*/
@@ -25,9 +19,6 @@ body{
 	box-shadow: 2px 2px 30px gray;
 	
 	background: linear-gradient(90deg, #D9F5EF, #FAF8F3);
-
-	
-	
 }
 /* section{
 	background-color: aliceblue;
